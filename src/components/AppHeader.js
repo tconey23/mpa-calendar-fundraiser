@@ -6,7 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
-import { studentData } from '../business/getStudents';
+import { studentData } from '../business/apiCalls';
 
 const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent}) => {
 

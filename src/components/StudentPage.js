@@ -1,11 +1,41 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, FormControl, OutlinedInput, Stack, TextField, Tooltip, Typography } from '@mui/material';
 import Calendar from './Calendar';
-import { studentDates } from '../business/getStudents';
+import { studentDates, addStudentDate } from '../business/apiCalls';
+
+const GiveLivelyWidget = () => {
+    useEffect(() => {
+      // Load the Give Lively widget script if required
+      const script = document.createElement('script');
+      script.src = "https://secure.givelively.org/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+  
+      return () => {
+        document.body.removeChild(script);
+      };
+    }, []);
+  
+    return (
+      <div>
+        <a
+          target="_blank"
+          className="give-lively-widget"
+          href="https://secure.givelively.org/donate/pta-colorado-congress-littleton-co"
+        >
+          Donate Now
+        </a>
+      </div>
+    );
+  };
 
 const StudentPage = ({selectedStudent, students}) => {
     const [disabledDates, setDisabledDates] = useState()
     const [selectedDate, setSelectedDate] = useState()
+    const [message, setMessage] = useState(null)
+    const [name, setName] = useState(null)
+    const [refreshCalendar, setRefreshCalendar] = useState(2)
+    
 
     const getStudentDates = async () => {
         let dates = await studentDates(selectedStudent)
@@ -16,13 +46,39 @@ const StudentPage = ({selectedStudent, students}) => {
         }
     }
 
+    const resetData = () => {
+        setTimeout(() => {
+            setRefreshCalendar(prev => prev + 1)
+            console.log('refresh')
+        }, 200);
+    }
+
+    const handleAddDate = async () => {
+
+        const reservation = {
+            date: {
+                [selectedDate.date]: {
+                    reserved: true,
+                    message: message,
+                    name: name
+                }
+            },
+            student: selectedStudent
+        }
+
+        await addStudentDate(reservation)
+        
+        resetData()
+    }
+
     useEffect(() => {
         getStudentDates()
         setSelectedDate(null)
-    }, [selectedStudent])
+    }, [selectedStudent, refreshCalendar])
+
 
   return (
-    <Stack direction={'column'} justifyContent={'flex-start'} alignItems={'center'} sx={{ height: '75vh', width: '100vw', backgroundColor: 'white'}} padding={5}>
+    <Stack key={refreshCalendar} direction={'column'} justifyContent={'flex-start'} alignItems={'center'} sx={{ height: '75vh', width: '100vw', backgroundColor: 'white'}} padding={5}>
         <Stack>
             <Typography color={'black'} variant='h3'>{selectedStudent}</Typography>
         </Stack>
@@ -46,16 +102,17 @@ const StudentPage = ({selectedStudent, students}) => {
                             :
                         <FormControl sx={{ width: '100%' }}>
                             <Box padding={2}>
-                                <OutlinedInput placeholder='Your name'/>
+                                <OutlinedInput onChange={(e) => setName(e.target.value)} placeholder='Your name'/>
                             </Box>
                             <Box padding={2}>
-                                <TextField sx={{height: '100%', width: '100%'}} fullWidth multiline placeholder='Your Message' maxRows={4}/>
+                                <TextField onChange={(e) => setMessage(e.target.value)} sx={{height: '100%', width: '100%'}} fullWidth multiline placeholder='Your Message' maxRows={4}/>
                             </Box>
+                            <GiveLivelyWidget />
                         </FormControl>
                         }
                         <Tooltip title={selectedDate.reserved ? 'This date has already been reserved' : ''}>
                             <Box padding={2}>
-                                <Button disabled={selectedDate.reserved} variant="contained">Reserve</Button>
+                                <Button onClick={() => handleAddDate()} disabled={selectedDate.reserved} variant="contained">Reserve</Button>
                             </Box>
                         </Tooltip>
                     </>
