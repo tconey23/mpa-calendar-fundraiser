@@ -1,0 +1,2932 @@
+{
+  "Sheet1": [
+    {
+      "LAST": "Bianchi",
+      "FIRST": "Annabelle",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Doyal",
+      "FIRST": "Sage",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Doyal",
+      "FIRST": "Stella",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Dugan",
+      "FIRST": "Kennedy",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Jakubowski",
+      "FIRST": "Samson",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Lebsack",
+      "FIRST": "Jacob",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Livesey",
+      "FIRST": "Phoenix",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Mahan",
+      "FIRST": "Reece",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Mapes",
+      "FIRST": "Lylah",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Meyer",
+      "FIRST": "Maryn",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Purrazzo",
+      "FIRST": "Warren",
+      "Teacher": "Alexa Burch",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Casey",
+      "FIRST": "Tierney",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Cerrillo Torres",
+      "FIRST": "Leonardo",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Cole",
+      "FIRST": "Andi",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "David",
+      "FIRST": "Ansel",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Hearn",
+      "FIRST": "Elle",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Litherland",
+      "FIRST": "Luna",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Mailes",
+      "FIRST": "Nicholas",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "McCauley-Blocher",
+      "FIRST": "Tomlin",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Olson",
+      "FIRST": "Veda",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Rezny",
+      "FIRST": "Lincoln",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Richter",
+      "FIRST": "Rhett",
+      "Teacher": "Alexa Burch",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Bartosh",
+      "FIRST": "Haydyn",
+      "Teacher": "Alexa Burch",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Coney",
+      "FIRST": "Maximus",
+      "Teacher": "Alexa Burch",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Frazier",
+      "FIRST": "Jayden",
+      "Teacher": "Alexa Burch",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Gaczol",
+      "FIRST": "Vesper",
+      "Teacher": "Alexa Burch",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Prichard",
+      "FIRST": "Lilian",
+      "Teacher": "Alexa Burch",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Splitek",
+      "FIRST": "Rose",
+      "Teacher": "Alexa Burch",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Cadier",
+      "FIRST": "Lucas",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Freehling",
+      "FIRST": "Hannah",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Livesey",
+      "FIRST": "Franklin",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Sandusky",
+      "FIRST": "Rownin",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Sutton",
+      "FIRST": "Orion",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Thompson",
+      "FIRST": "Owen",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Wright",
+      "FIRST": "Tyler",
+      "Teacher": "Amy Carroll",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Alarcon",
+      "FIRST": "Gerard",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Gaczol",
+      "FIRST": "Wyck",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Hernandez",
+      "FIRST": "Luciana",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Kirchner",
+      "FIRST": "Tilda",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Knotwell",
+      "FIRST": "Arabella",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "McKerley",
+      "FIRST": "Emmett",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Peterson",
+      "FIRST": "Clayton",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Wonders",
+      "FIRST": "Teague",
+      "Teacher": "Amy Carroll",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Baird",
+      "FIRST": "Nixon",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Berlute-Shea",
+      "FIRST": "Emilia",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Coppedge",
+      "FIRST": "Korra",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Coughran",
+      "FIRST": "Evan",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Gonzales",
+      "FIRST": "Liviana",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Green",
+      "FIRST": "Ava",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Herron",
+      "FIRST": "Seth",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Huber",
+      "FIRST": "Lydia",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Osckel",
+      "FIRST": "Bayleigh",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Shwayder",
+      "FIRST": "June",
+      "Teacher": "Amy Carroll",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Dierickx",
+      "FIRST": "Cassidy",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Gruber",
+      "FIRST": "Oliver",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Heath",
+      "FIRST": "Vivian",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Livingston",
+      "FIRST": "Wyatt",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Lowe",
+      "FIRST": "Ruby",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "O'Loughlin-Tibbits",
+      "FIRST": "Chinori",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Pierce",
+      "FIRST": "Lincoln",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Thompson",
+      "FIRST": "Jackson",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Wilson",
+      "FIRST": "Alfonso",
+      "Teacher": "Darcy Darby",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Campbell",
+      "FIRST": "Easton",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Ebendick",
+      "FIRST": "Beck",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Larsen",
+      "FIRST": "Devi",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Malik",
+      "FIRST": "Roman",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Mejia",
+      "FIRST": "Blaise",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Schenck",
+      "FIRST": "Annie",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Warrick",
+      "FIRST": "Tessa",
+      "Teacher": "Darcy Darby",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Avery",
+      "FIRST": "Atlas",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Barrett",
+      "FIRST": "Kalyssa",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Freehling",
+      "FIRST": "Natalie",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Jackson",
+      "FIRST": "Fawna",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Keotunian",
+      "FIRST": "Aiden",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Livesey",
+      "FIRST": "Archer",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Oesterreich",
+      "FIRST": "Riley",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Smith",
+      "FIRST": "Olive",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Stuber",
+      "FIRST": "Theodore",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Toney",
+      "FIRST": "Kendrick",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Whitfield Nall",
+      "FIRST": "Rowan",
+      "Teacher": "Darcy Darby",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Burch",
+      "FIRST": "Leda",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "David",
+      "FIRST": "Saxon",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Fitzpatrick",
+      "FIRST": "Declan",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Johnson",
+      "FIRST": "Ollin",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Kuzbiel",
+      "FIRST": "Sebastian",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Nehrig",
+      "FIRST": "Hunter",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "O'Loughlin-Tibbits",
+      "FIRST": "Kazuma",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Sanders",
+      "FIRST": "Anya",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Stone",
+      "FIRST": "Victoria",
+      "Teacher": "Dawn Tait",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Bilyeu",
+      "FIRST": "Samantha",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Coughran",
+      "FIRST": "Zachary",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "D'Ardenne",
+      "FIRST": "Kellen",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Grant",
+      "FIRST": "Teyden",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "MacPhail",
+      "FIRST": "Kai",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Midcap",
+      "FIRST": "Avery",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Navarre",
+      "FIRST": "Dean",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Sullivan",
+      "FIRST": "Sofia",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Welton",
+      "FIRST": "Charlotte",
+      "Teacher": "Dawn Tait",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Griffin",
+      "FIRST": "Annelise",
+      "Teacher": "Dawn Tait",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Lamb",
+      "FIRST": "Andrew",
+      "Teacher": "Dawn Tait",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Sasso",
+      "FIRST": "Emily",
+      "Teacher": "Dawn Tait",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Wright",
+      "FIRST": "Noah",
+      "Teacher": "Dawn Tait",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Hill",
+      "FIRST": "Iris",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Jackson",
+      "FIRST": "Moses",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Jakubowski",
+      "FIRST": "Lincoln",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Kirjak",
+      "FIRST": "Sasha",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Lamb",
+      "FIRST": "Jacob",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Nichols",
+      "FIRST": "Canaan",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Ogden",
+      "FIRST": "Clementine",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Turkus",
+      "FIRST": "Sam",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Burch",
+      "FIRST": "Galen",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Davidson",
+      "FIRST": "Julian",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Factor",
+      "FIRST": "Jillian",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Kraft",
+      "FIRST": "Evie",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Meyer",
+      "FIRST": "Beck",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Palladino",
+      "FIRST": "Jase",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Perkins",
+      "FIRST": "Remy",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Sher",
+      "FIRST": "Max",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Adle",
+      "FIRST": "Nathan",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Bernstein",
+      "FIRST": "Ana",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Coughran",
+      "FIRST": "Ava",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Fitzpatrick",
+      "FIRST": "Kai",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Gardino",
+      "FIRST": "Evan",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Gutierrez",
+      "FIRST": "Ethan",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Gutilla",
+      "FIRST": "Cicilia",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Livesey",
+      "FIRST": "Clarke",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Padilla",
+      "FIRST": "Kaden",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Prebynski",
+      "FIRST": "Corrinne",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Shonkwiler",
+      "FIRST": "Nora",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Whitfield Nall",
+      "FIRST": "Nora",
+      "Teacher": "Ekaterina Jorgensen",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Amabile",
+      "FIRST": "Jasper",
+      "Teacher": "Emily Freer",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "Ediger",
+      "FIRST": "Cohen",
+      "Teacher": "Emily Freer",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "Kearns",
+      "FIRST": "Reverie",
+      "Teacher": "Emily Freer",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "Goers",
+      "FIRST": "Orion",
+      "Teacher": "Emily Freer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Shwayder",
+      "FIRST": "Pearl",
+      "Teacher": "Emily Freer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Stodghill",
+      "FIRST": "Leena",
+      "Teacher": "Emily Freer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Connell",
+      "FIRST": "Theodore",
+      "Teacher": "Emily Freer",
+      "GRADE": "HD3"
+    },
+    {
+      "LAST": "Delvecchio",
+      "FIRST": "Hadden",
+      "Teacher": "Emily Freer",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Green",
+      "FIRST": "Ellie",
+      "Teacher": "Emily Freer",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Crispe",
+      "FIRST": "Colt",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Fath",
+      "FIRST": "Miya",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "FitzSimons",
+      "FIRST": "Chiara",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Loback",
+      "FIRST": "Luca",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Mason",
+      "FIRST": "Nguyen",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Slavev",
+      "FIRST": "Amelia",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Stover",
+      "FIRST": "Julian",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Thach",
+      "FIRST": "Gracie",
+      "Teacher": "Emily Freer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Airozo-Schulte",
+      "FIRST": "Augustine",
+      "Teacher": "Heidi Travis",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "Cabral",
+      "FIRST": "Vivienne",
+      "Teacher": "Heidi Travis",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "McCauley-Blocher",
+      "FIRST": "Finley",
+      "Teacher": "Heidi Travis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Navarre",
+      "FIRST": "Jack",
+      "Teacher": "Heidi Travis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Wonders",
+      "FIRST": "Freya",
+      "Teacher": "Heidi Travis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Abbott",
+      "FIRST": "Maya",
+      "Teacher": "Heidi Travis",
+      "GRADE": "HD3"
+    },
+    {
+      "LAST": "Colatosti",
+      "FIRST": "Willa",
+      "Teacher": "Heidi Travis",
+      "GRADE": "HD3"
+    },
+    {
+      "LAST": "Finoia",
+      "FIRST": "James",
+      "Teacher": "Heidi Travis",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Pauga",
+      "FIRST": "Jango",
+      "Teacher": "Heidi Travis",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Venanzi",
+      "FIRST": "Hadley",
+      "Teacher": "Heidi Travis",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Bowser",
+      "FIRST": "Wilder",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Cooke",
+      "FIRST": "Lachlan",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Cruz Diaz",
+      "FIRST": "Valentina",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Hamilton",
+      "FIRST": "Theodore",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Jacob",
+      "FIRST": "Parker",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Mejia",
+      "FIRST": "Ivy",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Sanchez",
+      "FIRST": "Alexei",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Sanders",
+      "FIRST": "Evelyn",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Schenck",
+      "FIRST": "Noella",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Walker",
+      "FIRST": "Luke",
+      "Teacher": "Heidi Travis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Sarnow",
+      "FIRST": "Faustine",
+      "Teacher": "Jen Walsch",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Ahr",
+      "FIRST": "Thalia",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Anderson",
+      "FIRST": "Zachariah",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Cadier",
+      "FIRST": "Sarah",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Goldfain",
+      "FIRST": "Mila",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Lowe",
+      "FIRST": "Jack",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Martin",
+      "FIRST": "Emmet",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "McCarthy",
+      "FIRST": "Kiera",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Odendahl",
+      "FIRST": "Vincent",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Upshaw",
+      "FIRST": "Declan",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Wright",
+      "FIRST": "Landon",
+      "Teacher": "Jen Walsh",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Clagett",
+      "FIRST": "Charlotte",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Lockhart",
+      "FIRST": "Jane",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Malek",
+      "FIRST": "Adrian",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Robertson",
+      "FIRST": "Kyleigh",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Rodriguez",
+      "FIRST": "Nolan",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Smith",
+      "FIRST": "Shane",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Strauch",
+      "FIRST": "Atticus",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Veith",
+      "FIRST": "Kaydance",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Wahl",
+      "FIRST": "Kayden",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Yost",
+      "FIRST": "Jackson",
+      "Teacher": "Jen Walsh",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Campbell",
+      "FIRST": "Aspen",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Dalton",
+      "FIRST": "River",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Goldsmith",
+      "FIRST": "Mavin",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Hernandez",
+      "FIRST": "Juan",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Marcuerquiaga-Hughes",
+      "FIRST": "Ivo Patxi",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Nguyen",
+      "FIRST": "Ryu",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Zamora",
+      "FIRST": "Paul",
+      "Teacher": "Jen Walsh",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Bower",
+      "FIRST": "Logan",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Brylo",
+      "FIRST": "Blakely",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Conde",
+      "FIRST": "Theodore",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Henley",
+      "FIRST": "Madison",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Martin",
+      "FIRST": "Langston",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Quirke",
+      "FIRST": "Miriam",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Robinson",
+      "FIRST": "Aria",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Rodriguez",
+      "FIRST": "Niko",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Sisler",
+      "FIRST": "Liam",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Walsh",
+      "FIRST": "Jasper",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Aragon",
+      "FIRST": "Asher",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Brands",
+      "FIRST": "Nora",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Dalton",
+      "FIRST": "Sara",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Dalton",
+      "FIRST": "Tarek",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Foster",
+      "FIRST": "Chase",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Garcia-Erwin",
+      "FIRST": "Kannon",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Husted",
+      "FIRST": "Jackson",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Knoll",
+      "FIRST": "Theo",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Loebach",
+      "FIRST": "Kai",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Osborne-Treiber",
+      "FIRST": "Anja Vera",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Splitek",
+      "FIRST": "Owen",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Casey",
+      "FIRST": "Quinlan",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Cerrillo-Torres",
+      "FIRST": "Jonathan",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Duong",
+      "FIRST": "Joey",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Kigundu",
+      "FIRST": "Jordan",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Lawin",
+      "FIRST": "Jaxzann",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Myers",
+      "FIRST": "Elliott",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Pacheco",
+      "FIRST": "Marlee",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Seibel",
+      "FIRST": "Talia",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Thompson",
+      "FIRST": "Ryan",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Zamora",
+      "FIRST": "Juniper",
+      "Teacher": "Jennifer Parker",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Stephens",
+      "FIRST": "Callum",
+      "Teacher": "Jill Mortis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Lovato",
+      "FIRST": "Quincy",
+      "Teacher": "Jill Mortis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Buckles",
+      "FIRST": "Lexi",
+      "Teacher": "Jill Motis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Claire",
+      "FIRST": "Clark",
+      "Teacher": "Jill Motis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Hannen",
+      "FIRST": "Wyatt",
+      "Teacher": "Jill Motis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Peterman",
+      "FIRST": "Harper",
+      "Teacher": "Jill Motis",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Davis",
+      "FIRST": "Aubrey",
+      "Teacher": "Jill Motis",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Aksamitova",
+      "FIRST": "Oleksandra",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Johnston",
+      "FIRST": "Olivin",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "McCaddon",
+      "FIRST": "Miles",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Mejia",
+      "FIRST": "Enzo",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Parr",
+      "FIRST": "Indiana",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Pederson",
+      "FIRST": "Jase",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Piccarella",
+      "FIRST": "Nico",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Schmitt",
+      "FIRST": "Eloise",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Siebrase",
+      "FIRST": "Louise",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Steinkamp",
+      "FIRST": "Emilia",
+      "Teacher": "Jill Motis",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Bowser",
+      "FIRST": "Willow",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Cabral",
+      "FIRST": "Oliver",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Campos",
+      "FIRST": "Iyla",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Coppedge",
+      "FIRST": "Zephyra",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Fife",
+      "FIRST": "Sydney",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Harrod",
+      "FIRST": "Charles",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Hirsch",
+      "FIRST": "Eloaku",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Kearns",
+      "FIRST": "Caspian",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Lafler",
+      "FIRST": "Stella",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Stidham",
+      "FIRST": "Ella",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Yoakum",
+      "FIRST": "Lillianna",
+      "Teacher": "Judy Faulder",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Ahrens",
+      "FIRST": "Roman",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Canavan",
+      "FIRST": "Fiona",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Courville",
+      "FIRST": "Rhys",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Eggers",
+      "FIRST": "Oliver",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Elton",
+      "FIRST": "Xavier",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Hill",
+      "FIRST": "Whittier",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Kanous",
+      "FIRST": "Samantha",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Leitz",
+      "FIRST": "Nora",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Quiroz",
+      "FIRST": "Jane",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Upshaw",
+      "FIRST": "Quintyn",
+      "Teacher": "Judy Faulder",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Airozo-Schulte",
+      "FIRST": "Anselm",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Bernstein",
+      "FIRST": "Avery",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Farrell",
+      "FIRST": "Thea",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Irvine",
+      "FIRST": "Tucker",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Matthews",
+      "FIRST": "Malcolm",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Moon",
+      "FIRST": "Macie",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Navarro",
+      "FIRST": "Bella",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Perkins",
+      "FIRST": "Yuri",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Pierce",
+      "FIRST": "Kinsley",
+      "Teacher": "Judy Faulder",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Brands",
+      "FIRST": "Porter",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Hoehler",
+      "FIRST": "Jesse",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Husted",
+      "FIRST": "Maeve",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Kapell",
+      "FIRST": "Wyatt",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "McCauley-Blocher",
+      "FIRST": "Oliver",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Moreno",
+      "FIRST": "Eliana",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Mullaney",
+      "FIRST": "Benjamin",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Patterson",
+      "FIRST": "Emma",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Schnaare",
+      "FIRST": "Alexander",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Sutton",
+      "FIRST": "West",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Wahl",
+      "FIRST": "Kynley",
+      "Teacher": "Kim Morgan",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Crawford",
+      "FIRST": "Maisy",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Everist",
+      "FIRST": "Koen",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Finger",
+      "FIRST": "Madelyn",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Gonzales",
+      "FIRST": "Lilah",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Hill",
+      "FIRST": "Jaelynn",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Kelly",
+      "FIRST": "Alyssa",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Livingston",
+      "FIRST": "Stone",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Smith",
+      "FIRST": "Marleigh",
+      "Teacher": "Kim Morgan",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Buschow",
+      "FIRST": "Akito",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Courville",
+      "FIRST": "Siena",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Duong",
+      "FIRST": "Bruce",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Farrell",
+      "FIRST": "Liam",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Lafler",
+      "FIRST": "Esmeralda",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Stevens",
+      "FIRST": "Tyson",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Stevens",
+      "FIRST": "Tabitha",
+      "Teacher": "Kim Morgan",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Alarcon",
+      "FIRST": "Kailea",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Amabile",
+      "FIRST": "Ryland",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Baron",
+      "FIRST": "Grace",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Buckles",
+      "FIRST": "Maya",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Ediger",
+      "FIRST": "Vada",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Pokorny",
+      "FIRST": "Hudson",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Sarnow",
+      "FIRST": "Claudia",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Urso",
+      "FIRST": "Alexander",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Warrick",
+      "FIRST": "Conner",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Wilson",
+      "FIRST": "Lawrence",
+      "Teacher": "Laura McManus",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Babcock",
+      "FIRST": "Wesley",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Beldt",
+      "FIRST": "Colton",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Eggers",
+      "FIRST": "Elliot",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Gray",
+      "FIRST": "Foxen",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Johnson",
+      "FIRST": "Nicholas",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Ouellette",
+      "FIRST": "Stella",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Pauga",
+      "FIRST": "Moana",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Sanders",
+      "FIRST": "Eamon",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Stodghill",
+      "FIRST": "Grace",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Vorwerck",
+      "FIRST": "Jackson",
+      "Teacher": "Laura McManus",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Alesch",
+      "FIRST": "Weston",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Coughran",
+      "FIRST": "Max",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Kigundu",
+      "FIRST": "Kayla",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Madigan",
+      "FIRST": "Brinkley",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Midcap",
+      "FIRST": "Lennon",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Sher",
+      "FIRST": "Sophie",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Walker",
+      "FIRST": "Charlotte",
+      "Teacher": "Laura McManus",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Hall",
+      "FIRST": "Xavier",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "McKerley",
+      "FIRST": "Mila",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Tran",
+      "FIRST": "Avalon",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Worth",
+      "FIRST": "Stow",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Kascel",
+      "FIRST": "Jonah",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Litherland",
+      "FIRST": "Negan",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Goers",
+      "FIRST": "Ryker",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Gonzalez",
+      "FIRST": "Quetzalli",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Johansen",
+      "FIRST": "Attily",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "McAdams",
+      "FIRST": "Logan",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Olson",
+      "FIRST": "Aella",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Quiroz",
+      "FIRST": "Damian",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Sandoval",
+      "FIRST": "Jahanna",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Thornton",
+      "FIRST": "Kali",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Turkus",
+      "FIRST": "Jack",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Wright",
+      "FIRST": "Brooks",
+      "Teacher": "Maria Bentancurd",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "June",
+      "FIRST": "Wood",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS1"
+    },
+    {
+      "LAST": "Noah",
+      "FIRST": "Martinez",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS1"
+    },
+    {
+      "LAST": "Rori",
+      "FIRST": "Schell",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS1"
+    },
+    {
+      "LAST": "Selene",
+      "FIRST": "Jobe",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS1"
+    },
+    {
+      "LAST": "Wesley",
+      "FIRST": "Reed",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS1"
+    },
+    {
+      "LAST": "Leah",
+      "FIRST": "Martinez",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS2"
+    },
+    {
+      "LAST": "Logan",
+      "FIRST": "Ahr",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS2"
+    },
+    {
+      "LAST": "Alina",
+      "FIRST": "Jobe",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Janine",
+      "FIRST": "Wood",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Jeriah",
+      "FIRST": "Johnson",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Mabel",
+      "FIRST": "Mentink",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Mateo",
+      "FIRST": "Molina",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Vivian",
+      "FIRST": "Holland",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Willem",
+      "FIRST": "Hayden",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS3"
+    },
+    {
+      "LAST": "Asher",
+      "FIRST": "Naha",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS4"
+    },
+    {
+      "LAST": "Orion",
+      "FIRST": "Payne-Erwin",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS4"
+    },
+    {
+      "LAST": "Vincent",
+      "FIRST": "Holland",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS4"
+    },
+    {
+      "LAST": "Wynston",
+      "FIRST": "Baumgartner",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS4"
+    },
+    {
+      "LAST": "Blake",
+      "FIRST": "Earley",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS5"
+    },
+    {
+      "LAST": "Abriella",
+      "FIRST": "Johnson",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS6"
+    },
+    {
+      "LAST": "Maycee",
+      "FIRST": "Van Aller",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS6"
+    },
+    {
+      "LAST": "Silas",
+      "FIRST": "Lauzon",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS7"
+    },
+    {
+      "LAST": "Trey",
+      "FIRST": "Woods",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS7"
+    },
+    {
+      "LAST": "Callen",
+      "FIRST": "Baumgartner",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS8"
+    },
+    {
+      "LAST": "Naomi",
+      "FIRST": "Leed",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS8"
+    },
+    {
+      "LAST": "Tyson",
+      "FIRST": "Woods",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HS8"
+    },
+    {
+      "LAST": "Galen",
+      "FIRST": "Tompkins",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HSK"
+    },
+    {
+      "LAST": "Harmony",
+      "FIRST": "Paradise",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HSK"
+    },
+    {
+      "LAST": "Naomi",
+      "FIRST": "Domokos",
+      "Teacher": "Melissa Segesman",
+      "GRADE": "HSK"
+    },
+    {
+      "LAST": "Jobe",
+      "FIRST": "Selene",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Lierman",
+      "FIRST": "Evelyn",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Martinez",
+      "FIRST": "Noah",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Schell",
+      "FIRST": "Rori",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "1"
+    },
+    {
+      "LAST": "Ahr",
+      "FIRST": "Logan",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Mabel",
+      "FIRST": "Mentink",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Martinez",
+      "FIRST": "Leah",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "2"
+    },
+    {
+      "LAST": "Hayden",
+      "FIRST": "Willem",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Holland",
+      "FIRST": "Vivian",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Jobe",
+      "FIRST": "Alina",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Johnson",
+      "FIRST": "Jeriah",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Mateo",
+      "FIRST": "Molina",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Mentink",
+      "FIRST": "Mabel",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Wood",
+      "FIRST": "Janine",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "3"
+    },
+    {
+      "LAST": "Holland",
+      "FIRST": "Vincent",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Naha",
+      "FIRST": "Asher",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Payne-Erwin",
+      "FIRST": "Orion",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Earley",
+      "FIRST": "Blake",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Johnson",
+      "FIRST": "Abriella",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Silas",
+      "FIRST": "Lauzon",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Van Aller",
+      "FIRST": "Maycee",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Lauzon",
+      "FIRST": "Silas",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Leed",
+      "FIRST": "Naomi",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Paradise",
+      "FIRST": "Harmony",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Tompkins",
+      "FIRST": "Galen",
+      "Teacher": "Melisse Segesman",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Ford",
+      "FIRST": "Micah",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Gilchrist",
+      "FIRST": "Alana",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Goldsmith",
+      "FIRST": "Malloy",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Kirchner",
+      "FIRST": "Hughes",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Kirjak",
+      "FIRST": "Sandor",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Knoll",
+      "FIRST": "Grayson",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Kubat",
+      "FIRST": "Ariel",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Quirke",
+      "FIRST": "Dylan",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Sanchez",
+      "FIRST": "Luca",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Thompson",
+      "FIRST": "Oliver",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Beldt",
+      "FIRST": "Jacob",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Gepford",
+      "FIRST": "Addali",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Hogle",
+      "FIRST": "Ananda",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Johnson",
+      "FIRST": "Margaret",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Knowles",
+      "FIRST": "Jaxon",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Leitz",
+      "FIRST": "Marie",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Many",
+      "FIRST": "Liam",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Morency",
+      "FIRST": "Alexander",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Navarro",
+      "FIRST": "Ava",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Neufeld",
+      "FIRST": "Abigail",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Nyback",
+      "FIRST": "Carter",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Bartlett",
+      "FIRST": "Grace",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Gabriele",
+      "FIRST": "Harry",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Herron",
+      "FIRST": "Nathaniel",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Lebsack",
+      "FIRST": "Meagan",
+      "Teacher": "Natalie Hummell",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Arapkiles",
+      "FIRST": "Ivee",
+      "Teacher": "Natlie Hummell",
+      "GRADE": "4"
+    },
+    {
+      "LAST": "Bayford",
+      "FIRST": "Micah",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Hill",
+      "FIRST": "Gramercy",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Knotwell",
+      "FIRST": "Landon",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Knotwell",
+      "FIRST": "Liam",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Ksionek",
+      "FIRST": "Cassandra",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Kubat",
+      "FIRST": "Olivier",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Martin",
+      "FIRST": "Francisca",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "McDonald",
+      "FIRST": "Warren",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Meredith",
+      "FIRST": "Lana",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Neufeld",
+      "FIRST": "Richard",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Pokorny",
+      "FIRST": "Hayden",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Robertson",
+      "FIRST": "Kasyn",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Smith",
+      "FIRST": "Alexander",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Thompson",
+      "FIRST": "Benjamin",
+      "Teacher": "Rhett Travis",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Reichert",
+      "FIRST": "Sopha",
+      "Teacher": "Rhett Travis",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Sawyer",
+      "FIRST": "Brooklynne",
+      "Teacher": "Rhett Travis",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Matthews",
+      "FIRST": "Amelie",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Nguyen",
+      "FIRST": "Ava",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "5"
+    },
+    {
+      "LAST": "Bray",
+      "FIRST": "Colin",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "6"
+    },
+    {
+      "LAST": "Coughran",
+      "FIRST": "Aubrey",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "DePaolo",
+      "FIRST": "Elleanna",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Grant",
+      "FIRST": "Liam",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "7"
+    },
+    {
+      "LAST": "Gutilla",
+      "FIRST": "Chiara",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "James",
+      "FIRST": "Justice",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Lamb",
+      "FIRST": "Ariana",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Malek",
+      "FIRST": "Dorian",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Moreno",
+      "FIRST": "Josiah",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Rodriguez",
+      "FIRST": "Roman",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Unger",
+      "FIRST": "Tytus",
+      "Teacher": "Robin Ziemann",
+      "GRADE": "8"
+    },
+    {
+      "LAST": "Forisha",
+      "FIRST": "Juniper",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "Pederson",
+      "FIRST": "Josephine",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "FD3"
+    },
+    {
+      "LAST": "Parisi",
+      "FIRST": "Theodora",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Peterman",
+      "FIRST": "Samantha",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Stuber",
+      "FIRST": "Louisa",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Whitfield Nall",
+      "FIRST": "Henry",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Naturman",
+      "FIRST": "Nathaniel",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "HD3"
+    },
+    {
+      "LAST": "Henley",
+      "FIRST": "Jordan",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Venanzi",
+      "FIRST": "Hannah",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Colatosti",
+      "FIRST": "Lark",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Hatton",
+      "FIRST": "Camila",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Lam Yuen",
+      "FIRST": "Bria",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Mullaney",
+      "FIRST": "Brendan",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Piccarella",
+      "FIRST": "Luca",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Prichard",
+      "FIRST": "Blake",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Reyes",
+      "FIRST": "Maddos",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Smith",
+      "FIRST": "Carter",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Stephens",
+      "FIRST": "Estelle",
+      "Teacher": "Sachi Pulford",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Arbiter",
+      "FIRST": "Nolan",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Berninger",
+      "FIRST": "Cooper",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Fife",
+      "FIRST": "Lucie",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Kapell",
+      "FIRST": "Shaylee",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Mitchell",
+      "FIRST": "Jack",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Pozek",
+      "FIRST": "Benjamin",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Stover",
+      "FIRST": "Emerson",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "FD4"
+    },
+    {
+      "LAST": "Hilleary",
+      "FIRST": "Soren",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Kascel",
+      "FIRST": "Elliott",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Niraula",
+      "FIRST": "Suyog",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "HD4"
+    },
+    {
+      "LAST": "Babcock",
+      "FIRST": "Benjamin",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Barba Velazquez",
+      "FIRST": "Leo",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Everett",
+      "FIRST": "Reed",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Farmer",
+      "FIRST": "Charles",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Hester",
+      "FIRST": "Braxton",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Mailes",
+      "FIRST": "Julia",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Mixon",
+      "FIRST": "Freya",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Nichols",
+      "FIRST": "Declan",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    },
+    {
+      "LAST": "Osckel",
+      "FIRST": "Nolan",
+      "Teacher": "Shari Buehrer",
+      "GRADE": "K"
+    }
+  ]
+}
