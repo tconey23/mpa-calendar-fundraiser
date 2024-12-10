@@ -9,7 +9,7 @@ const BreadCrumbs = ({setSelectedStudent}) => {
   const pathSegments = location.pathname.split("/").filter((path) => path);
 
   return (
-    <Stack direction="row" spacing={1} sx={{ padding: 2, bgcolor: "primary.main" }}>
+    <Stack direction="row" spacing={1} sx={{bgcolor: "primary.hover"}}>
       <nav>
         <ul style={{ display: "flex", listStyle: "none", padding: 0 }}>
           <li>

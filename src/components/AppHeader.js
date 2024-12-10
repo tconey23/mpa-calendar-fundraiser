@@ -7,9 +7,13 @@ import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { studentData } from '../business/apiCalls';
+import PTALogo from '../assets/PTA-logo-Photoroom.png'
+import {useMediaQuery} from '@mui/material';
 
 const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, isDarkMode, setIsDarkMode}) => {
-
+    
+    const webMed = useMediaQuery('(min-width:900px)');
+    
     const getStudentList = async () => {
         try {
             const list = await studentData();
@@ -35,14 +39,9 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
                     <Box padding={2}>
                         <i className="fi fi-br-menu-burger"></i>
                     </Box>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        Montessori Peaks Academy
-                    </Typography>
+                   <Box padding={0.5} justifyContent={'center'} alignItems={'center'} width={'100%'} display={'flex'}>
+                    <img style={{padding: 2, height: 'clamp(10vh, 10vw, 75px)', backgroundColor: isDarkMode && 'white'}} src={PTALogo}/>
+                   </Box>
                     <Box sx={{cursor: 'pointer', ":hover": {filter: 'invert(1)'}}} onClick={() => setIsDarkMode(prev => !prev)}>
                         {isDarkMode ? <i className="fi fi-br-sun"></i> : <i className="fi fi-br-moon"></i>}
                     </Box>

@@ -4,6 +4,7 @@ import SearchField from './SearchField';
 import { useNavigate } from 'react-router-dom';
 import StudentCard from './StudentCard';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import MediaDisplay from './MediaDisplay';
 
 const HomePage = ({ students, setSelectedStudent, selectedStudent }) => {
   const navigate = useNavigate();
@@ -21,13 +22,19 @@ const HomePage = ({ students, setSelectedStudent, selectedStudent }) => {
   }, [students]);
 
   return (
-    <Stack
+    <Stack direction={webMed ? 'row' : 'column'} sx={{width: '100%', height: '100%'}}>
+      {webMed && 
+        <Stack direction={'column'} justifyContent={'center'} alignItems={'center'} width={'50vw'} height={'75vh'}>
+          <MediaDisplay />
+        </Stack>
+      }
+      <Stack
       direction={'column'}
       justifyContent={'flex-start'}
       alignItems={'center'}
       sx={{
         height: '75vh',
-        width: '75vw',
+        width: webMed ? '50vw' : '75vw',
         borderWidth: '1px',
         borderStyle: 'solid',
         borderRadius: '5px',
@@ -35,31 +42,31 @@ const HomePage = ({ students, setSelectedStudent, selectedStudent }) => {
       }}
       borderColor={'primary.contrastText'}
       padding={5}
-    >
-      <Typography>Select Child</Typography>
+      >
       <SearchField
         setStudentFilter={setStudentFilter}
         text={'123'}
-        label={"Child's Name"}
+        label={"Student's Name"}
         data={students}
-      />
-      <Stack
-        sx={{ overflowY: 'scroll' }}
-        width={'95%'}
-        direction={'column'}
-        alignItems={'center'}
-        padding={1}
-      >
-        {students
-          .filter((st) => {
-            if (!studentFilter) {
-              return true;
-            }
-            return `${st.FIRST} ${st.LAST}` === studentFilter;
-          })
-          .map((st, i) => (
-            <StudentCard webMed={webMed} key={i} student={st} setSelectedStudent={setSelectedStudent}/>
-          ))}
+        />
+        <Stack
+          sx={{ overflowY: 'scroll' }}
+          width={'95%'}
+          direction={'column'}
+          alignItems={'center'}
+          padding={1}
+          >
+          {students
+            .filter((st) => {
+              if (!studentFilter) {
+                return true;
+              }
+              return `${st.FIRST} ${st.LAST}` === studentFilter;
+            })
+            .map((st, i) => (
+              <StudentCard webMed={webMed} key={i} student={st} setSelectedStudent={setSelectedStudent}/>
+            ))}
+        </Stack>
       </Stack>
     </Stack>
   );

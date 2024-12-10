@@ -39,7 +39,7 @@ const StudentCard = ({ student, webMed, setSelectedStudent }) => {
       alignItems={'flex-start'}
       justifyContent={'flex-start'}
     >
-      <Avatar>{`${student.FIRST[0]}${student.LAST[0]}`}</Avatar>
+      <Avatar sx={{backgroundColor: 'primary.avatar', color: 'text.avatar'}}>{`${student.FIRST[0]}${student.LAST[0]}`}</Avatar>
       <Stack width={'100%'} marginLeft={1}>
         <Typography>{`${student.FIRST} ${student.LAST}`}</Typography>
         <Typography marginTop="4px" fontWeight="bold">
