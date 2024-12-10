@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Stack, Typography, Avatar, Slider } from '@mui/material';
+import { Stack, Typography, Avatar, Slider} from '@mui/material';
 
 const StudentCard = ({ student, webMed, setSelectedStudent }) => {
   const [studentTotal, setStudentTotal] = useState(0);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Button, FormControl, OutlinedInput, Stack, TextField, Tooltip, Typography } from '@mui/material';
+import { Box, Button, FormControl, OutlinedInput, Stack, TextField, Tooltip, Typography, Alert, InputLabel } from '@mui/material';
 import Calendar from './Calendar';
 import { studentDates, addStudentDate } from '../business/apiCalls';
 import dayjs from 'dayjs';
@@ -14,6 +14,7 @@ const StudentPage = ({ selectedStudent }) => {
   const [name, setName] = useState('');
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [donateAmount, setDonateAmount] = useState('$0.00')
+  const [transactionStatus, setTransactionStatus] = useState(null)
 
   const webMed = useMediaQuery('(min-width:900px)')
 
@@ -56,10 +57,15 @@ const StudentPage = ({ selectedStudent }) => {
 
   useEffect(() => {
     if(selectedDate){
+        setTransactionStatus(null)
       let dateNum = formatDate(new Date(selectedDate.date))
       dateNum[0] == 0 ? setDonateAmount(`${dateNum[1]}`) : setDonateAmount(`${dateNum}`)
     }
   }, [selectedDate])
+
+  useEffect(() => {
+    console.log(transactionStatus)
+  }, [transactionStatus])
 
   useEffect(() => {
     console.log(webMed)
@@ -138,6 +144,7 @@ const StudentPage = ({ selectedStudent }) => {
                   <Box padding={2}>
                     <OutlinedInput
                       value={name}
+                      required
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your name"
                     />
@@ -147,9 +154,10 @@ const StudentPage = ({ selectedStudent }) => {
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       sx={{ width: '100%' }}
+                      required
                       fullWidth
                       multiline
-                      placeholder="Your Message"
+                      label="Your Message"
                       maxRows={4}
                     />
                   </Box>
@@ -161,19 +169,33 @@ const StudentPage = ({ selectedStudent }) => {
                       maxRows={4}
                     />
                   </Box>
-                  <Paypal donateAmount={donateAmount}/>
+                {!transactionStatus && message && name &&
+                    <Paypal setTransactionStatus={setTransactionStatus} donateAmount={donateAmount}/>
+                }
+                {transactionStatus === 'COMPLETED' && message && name && <Alert severity='success'>
+                    <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
+                    <Typography>Please proceed with your reservation</Typography>
+                </Alert>
+                }
+                {transactionStatus === 'COMPLETED' && message && name && <Alert severity='success'>
+                    <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
+                    <Typography>Please proceed with your reservation</Typography>
+                </Alert>
+                }
+
+                
                 </FormControl>
               )}
 
               <Tooltip title={selectedDate.reserved ? 'This date has already been reserved' : ''}>
                 <Box padding={2}>
-                  <Button
+                  {transactionStatus === 'COMPLETED' && <Button
                     onClick={handleAddDate}
                     disabled={selectedDate.reserved}
                     variant="contained"
                   >
                     Reserve
-                  </Button>
+                  </Button>}
                 </Box>
               </Tooltip>
             </>

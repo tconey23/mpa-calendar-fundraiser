@@ -10,7 +10,7 @@ import {
 
 async function createOrderCallback() {
   try {
-    const response = await fetch("/api/orders", {
+    const response = await fetch("http://localhost:8888/api/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

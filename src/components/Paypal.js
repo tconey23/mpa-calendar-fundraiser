@@ -6,7 +6,7 @@ function Message({ content }) {
     return <p>{content}</p>;
   }
 
-const Paypal = ({donateAmount}) => {
+const Paypal = ({donateAmount, setTransactionStatus}) => {
     const initialOptions = {
         "client-id": "test",
         "enable-funding": "card",
@@ -49,7 +49,7 @@ const Paypal = ({donateAmount}) => {
                   });
     
                   const orderData = await response.json();
-    
+                  console.log(orderData)
                   if (orderData.id) {
                     return orderData.id;
                   } else {
@@ -68,7 +68,7 @@ const Paypal = ({donateAmount}) => {
               onApprove={async (data, actions) => {
                 try {
                   const response = await fetch(
-                    `/api/orders/${data.orderID}/capture`,
+                    `http://localhost:8888/api/orders/${data.orderID}/capture`,
                     {
                       method: "POST",
                       headers: {
@@ -99,20 +99,12 @@ const Paypal = ({donateAmount}) => {
                     // Or go to another URL:  actions.redirect('thank_you.html');
                     const transaction =
                       orderData.purchase_units[0].payments.captures[0];
-                    setMessage(
-                      `Transaction ${transaction.status}: ${transaction.id}. See console for all available details`,
-                    );
-                    console.log(
-                      "Capture result",
-                      orderData,
-                      JSON.stringify(orderData, null, 2),
-                    );
+                    setTransactionStatus(transaction.status)
+                    console.log(transaction)
                   }
                 } catch (error) {
                   console.error(error);
-                  setMessage(
-                    `Sorry, your transaction could not be processed...${error}`,
-                  );
+                  setTransactionStatus(error)
                 }
               }}
             />
