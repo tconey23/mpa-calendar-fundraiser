@@ -22,10 +22,14 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
 
     const handleDateSelect = (val) => {
         const selectedDate = formatDate(val.$d);
-        setSelectedDate({
-            date: selectedDate,
-            reserved: getCustomTitle(selectedDate)
-        });
+        setSelectedDate(null)
+
+        setTimeout(() => {            
+            setSelectedDate({
+                date: selectedDate,
+                reserved: getCustomTitle(selectedDate)
+            });
+        }, 200);
     };
 
     const StyledSpecialDay = styled('div')(({ theme }) => ({
@@ -41,7 +45,6 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
     }));
 
     return (
-        <Stack direction="column" sx={{ height: '98vh', width: '100vw' }}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Suspense fallback={<ProgressCircle />}>
                     <DateCalendar
@@ -73,7 +76,6 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
                     />
                 </Suspense>
             </LocalizationProvider>
-        </Stack>
     );
 };
 

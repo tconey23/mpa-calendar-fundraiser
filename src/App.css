@@ -1,5 +1,9 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
 
+body{
+  overflow: hidden
+}
+
 .App {
   text-align: center;
 }

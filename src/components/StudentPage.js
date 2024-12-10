@@ -4,6 +4,8 @@ import Calendar from './Calendar';
 import { studentDates, addStudentDate } from '../business/apiCalls';
 import dayjs from 'dayjs';
 import Paypal from './Paypal';
+import {Avatar} from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 const StudentPage = ({ selectedStudent }) => {
   const [disabledDates, setDisabledDates] = useState([]);
@@ -12,6 +14,8 @@ const StudentPage = ({ selectedStudent }) => {
   const [name, setName] = useState('');
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [donateAmount, setDonateAmount] = useState('$0.00')
+
+  const webMed = useMediaQuery('(min-width:900px)')
 
   const formatDate = (date) => dayjs(date).format('DD')
 
@@ -35,6 +39,7 @@ const StudentPage = ({ selectedStudent }) => {
           reserved: true,
           message,
           name,
+          dollarAmount: donateAmount
         },
       },
       student: selectedStudent,
@@ -56,10 +61,14 @@ const StudentPage = ({ selectedStudent }) => {
     }
   }, [selectedDate])
 
+  useEffect(() => {
+    console.log(webMed)
+  }, [webMed])
+
   return (
     <Stack
-      direction="column"
-      justifyContent="flex-start"
+      direction='column'
+      justifyContent={webMed ? 'center' : 'flex_start'}
       alignItems="center"
       sx={{
         height: '75vh',
@@ -71,38 +80,43 @@ const StudentPage = ({ selectedStudent }) => {
       borderColor="primary.contrastText"
       padding={5}
     >
-      <Typography color="text.secondary" variant="h3">
-        {selectedStudent}
-      </Typography>
+        <Box sx={{display: 'flex'}}>
+            <Avatar>{selectedStudent[0]}</Avatar>
+            <Typography sx={{textDecoration: 'underline', marginBottom: 2, fontSize: 'clamp(10px, 5vw, 50px)', marginLeft: 1}} color="text.secondary" variant="h3">
+                {selectedStudent}
+            </Typography>
+        </Box>
 
       <Stack
-        direction="row"
+        direction={webMed ? 'row' : 'column'}
         justifyContent="flex-start"
         alignItems="center"
-        sx={{ height: '98%', width: '100%' }}
+        sx={{ height: '98%', width: '100%', overflowY: 'scroll', boxShadow: 'inset 0px 0px 16px 0px #00000042'}}
         padding={2}
       >
         <Stack
           direction="column"
           justifyContent="flex-start"
           alignItems="center"
-          sx={{ height: '98%', width: '50%' }}
+          sx={{ height: '98%', width: webMed ? '50%' : '100%' }}
         >
-          <Box display="flex" flexDirection="column" paddingBottom={2}>
-            <i className="fi fi-ss-circle" style={{ color: 'green' }}> Reserved</i>
+          <Box display="flex" flexDirection={webMed ? 'column' : 'row'} paddingBottom={0}>
+            <i className="fi fi-ss-circle" style={{ color: 'green', marginRight: 30}}> Reserved</i>
             <i className="fi fi-ss-circle" style={{ color: 'rgb(1 99 196)' }}> Today</i>
           </Box>
-          <Calendar
-            disabledDates={disabledDates}
-            setSelectedDate={setSelectedDate}
-          />
+          <Stack justifyContent={'center'} alignItems={'center'} sx={{height: webMed ? '100%' : '100%', width: '100%'}}>
+            <Calendar
+                disabledDates={disabledDates}
+                setSelectedDate={setSelectedDate}
+            />
+          </Stack>
         </Stack>
 
         <Stack
           direction="column"
           justifyContent="flex-start"
           alignItems="center"
-          sx={{ height: '98%', width: '50%', overflowY: 'auto'}}
+          sx={{ height: '98%', width: webMed ? '50%' : '100%'}}
         >
           {selectedDate && (
             <>

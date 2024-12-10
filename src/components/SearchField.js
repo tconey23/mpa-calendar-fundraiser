@@ -1,6 +1,6 @@
 import { Box, Autocomplete, TextField } from '@mui/material';
 
-const SearchField = ({ setSelectedStudent, label, data }) => {
+const SearchField = ({ setStudentFilter, label, data }) => {
   return (
     <Box>
       <Autocomplete
@@ -13,8 +13,11 @@ const SearchField = ({ setSelectedStudent, label, data }) => {
         })) || []} // Map data directly, or use an empty array if data is undefined
         sx={{ width: 300 }}
         onChange={(event, value) => {
-          // Update selected student with the label of the selected option
-          if (value) setSelectedStudent(value.label);
+          if (value) {
+            setStudentFilter(value.label)
+          } else {
+            setStudentFilter(null)
+          }
         }}
         renderInput={(params) => <TextField {...params} label={label} />}
       />

@@ -10,12 +10,9 @@ import HomePage from './components/HomePage';
 import BreadCrumbs from './components/BreadCrumbs';
 
 function App() {
-  const [students, setStudents] = useState([
-    { FIRST: "John", LAST: "Doe" },
-    { FIRST: "Jane", LAST: "Smith" },
-  ])
-  const [selectedStudent, setSelectedStudent] = useState('');
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [students, setStudents] = useState([])
+  const [selectedStudent, setSelectedStudent] = useState('')
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   const theme = isDarkMode ? darkPalette : lightPalette;
 

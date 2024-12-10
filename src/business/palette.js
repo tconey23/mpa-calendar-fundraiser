@@ -5,6 +5,7 @@ const lightPalette = createTheme({
     mode: "light",
     primary: {
       main: "#80C2AF",
+      hover: "#70798C", 
       contrastText: "#1B2A41",
     },
     text: {
@@ -23,6 +24,7 @@ const darkPalette = createTheme({
     mode: "dark",
     primary: {
       main: "#70798C",
+      hover: "#70798C",
       contrastText: "#F5F1ED",
     },
     text: {
