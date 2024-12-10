@@ -22,7 +22,6 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
 
     const handleDateSelect = (val) => {
         const selectedDate = formatDate(val.$d);
-        console.log(getCustomTitle(selectedDate))
         setSelectedDate({
             date: selectedDate,
             reserved: getCustomTitle(selectedDate)

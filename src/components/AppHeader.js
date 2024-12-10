@@ -8,7 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { studentData } from '../business/apiCalls';
 
-const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent}) => {
+const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, isDarkMode, setIsDarkMode}) => {
 
     const getStudentList = async () => {
         try {
@@ -43,7 +43,10 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent})
                     >
                         Montessori Peaks Academy
                     </Typography>
-                    <Box width={200} padding={2}>
+                    <Box sx={{cursor: 'pointer', ":hover": {filter: 'invert(1)'}}} onClick={() => setIsDarkMode(prev => !prev)}>
+                        {isDarkMode ? <i className="fi fi-br-sun"></i> : <i className="fi fi-br-moon"></i>}
+                    </Box>
+                    {/* <Box width={200} padding={2}>
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">Child's Name</InputLabel>
                             <Select
@@ -64,7 +67,7 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent})
                                 }
                             </Select>
                         </FormControl>
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </AppBar>
         </Box>
