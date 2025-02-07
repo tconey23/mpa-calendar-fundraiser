@@ -15,6 +15,7 @@ const StudentPage = ({ selectedStudent }) => {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [donateAmount, setDonateAmount] = useState('$0.00')
   const [transactionStatus, setTransactionStatus] = useState(null)
+  const [isReserving, setIsReserving] = useState(true)
 
   const webMed = useMediaQuery('(min-width:900px)')
 
@@ -64,12 +65,12 @@ const StudentPage = ({ selectedStudent }) => {
   }, [selectedDate])
 
   useEffect(() => {
-    console.log(transactionStatus)
-  }, [transactionStatus])
-
-  useEffect(() => {
-    console.log(webMed)
-  }, [webMed])
+    if(isReserving){
+        setTimeout(() => {
+            setIsReserving(false)
+        }, 2000);
+    }
+  }, [isReserving])
 
   return (
     <Stack
@@ -100,6 +101,10 @@ const StudentPage = ({ selectedStudent }) => {
         sx={{ height: '98%', width: '100%', overflowY: 'scroll', boxShadow: 'inset 0px 0px 16px 0px #00000042'}}
         padding={2}
       >
+        <Stack sx={{minHeight: '50px'}}>
+            {isReserving && <Alert severity='success'>Your date has been reserved!</Alert>}
+        </Stack>
+        
         <Stack
           direction="column"
           justifyContent="flex-start"
@@ -142,8 +147,8 @@ const StudentPage = ({ selectedStudent }) => {
               ) : (
                 <FormControl sx={{ width: '100%' }}>
                   <Box padding={2}>
-                    <OutlinedInput
-                      value={name}
+                    <TextField
+                      label='Your name'
                       required
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your name"
@@ -177,12 +182,10 @@ const StudentPage = ({ selectedStudent }) => {
                     <Typography>Please proceed with your reservation</Typography>
                 </Alert>
                 }
-                {transactionStatus === 'COMPLETED' && message && name && <Alert severity='success'>
-                    <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
-                    <Typography>Please proceed with your reservation</Typography>
+                {transactionStatus !== 'COMPLETED' && message && name && <Alert severity='error'>
+                    <Typography>{`We're sorry there was an error in your request. Your payment could not be completed`}</Typography>
                 </Alert>
                 }
-
                 
                 </FormControl>
               )}
