@@ -7,12 +7,15 @@ import AppHeader from './components/AppHeader';
 import { useState } from 'react';
 import StudentPage from './components/StudentPage';
 import LoginFields from './components/LoginFields';
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 function App() {
   const [students, setStudents] = useState([])
   const [selectedStudent, setSelectedStudent] = useState(null)
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [loggedIn, setLoggedIn] = useState(false)
+
+  const webMed = useMediaQuery('(min-width:900px)')
 
   const theme = isDarkMode ? darkPalette : lightPalette;
 

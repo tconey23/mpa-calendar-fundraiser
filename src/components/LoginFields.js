@@ -4,6 +4,7 @@ import { studentCredentials } from '../business/apiCalls';
 import TextField from '@mui/material/TextField';
 import { child } from 'firebase/database';
 import MediaDisplay from './MediaDisplay';
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 
 const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
@@ -18,6 +19,8 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
     
 
     const checkString = async (str) => /[^a-zA-Z0-9]/.test(str);
+    const webMed = useMediaQuery('(min-width:900px)')
+
 
     const validateEntry = async (str, fld, id) => {
         const val = await checkString(str)
@@ -79,15 +82,15 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
     }, [childFirst, childLast, password, username])
     
   return (
-    <Stack direction={'column'} sx={{ height: '79vh', width: '98vw', borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} paddingTop={3} justifyContent={'flex-start'} alignItems={'center'}>
-        <Stack direction={'column'} sx={{padding: 1, borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} width={1000} justifyContent={'center'} alignItems={'center'}>
-            <Typography>Enter your child's <i>full</i> first and last name, as well as the last name of their <i>lead</i> teacher</Typography>
+    <Stack direction={'column'} sx={{ height: '79vh', width: '100%', borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} paddingTop={3} justifyContent={'flex-start'} alignItems={'center'}>
+        <Stack direction={'column'} sx={{scale: webMed? 1 : 0.75, padding: 1, borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} width={"98vw"} justifyContent={'center'} alignItems={'center'}>
+            <Typography fontSize={webMed? 20 : 10}>Enter your child's <i>full</i> first and last name, as well as the last name of their <i>lead</i> teacher</Typography>
             <i>
-                <Typography >**Do not include any spaces or symbols (hyphen, apostrophe etc.)**</Typography>
+                <Typography fontSize={webMed? 20 : 10}>**Do not include any spaces or symbols (hyphen, apostrophe etc.)**</Typography>
             </i>
             <Box
             component="form"
-            sx={{ '& > :not(style)': { m: 1, width: '25ch' } }}
+            sx={{ '& > :not(style)': { m: 1, width: '25ch' }}}
             noValidate
             autoComplete="off"
             >
@@ -126,14 +129,14 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
                 {errors && errors.map((e) => (
                         <Typography color={'red'}>{e}</Typography>
                     ))}
+                {toggleError && 
+                    <Typography color={'red'}>{toggleError}</Typography>
+                }
             </Stack>
             <Button
             variant="contained"
                 onClick={() => setUserName(`${childFirst}${childLast}`)}
                 >Submit</Button>
-                {toggleError && 
-                    <Typography color={'red'}>{toggleError}</Typography>
-                }
             </Stack>
             <MediaDisplay />
     </Stack>
