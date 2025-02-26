@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter initialEntries={["/home"]}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Stack direction="column" justifyContent="center">
+        <Stack direction="column" justifyContent="center" alignItems={'center'} width={'100%'}>
           <AppHeader
             students={students}
             setStudents={setStudents}
@@ -34,11 +34,12 @@ function App() {
           />
           <Stack
             direction="column"
-            justifyContent="center"
+            justifyContent="flex-start"
             alignItems="center"
             padding={3}
+            sx={{overflow: webMed ? 'hidden' : 'auto', height: webMed ? '100vh' : '200vh'}}
           >
-            <Typography sx={{fontSize: 30}}>Thank you for supporting the new MPA playground!</Typography>
+            <Typography sx={{fontSize: 30, textAlign: 'center'}}>Thank you for supporting the new MPA playground!</Typography>
             {!loggedIn && 
             <Stack>
               <LoginFields loggedIn={loggedIn} setLoggedIn={setLoggedIn} setSelectedStudent={setSelectedStudent}/>

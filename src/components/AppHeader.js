@@ -33,7 +33,7 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
     };
 
     return (
-        <Box sx={{ flexGrow: 1 }}> 
+        <Box width={'100vw'} sx={{ flexGrow: 1 }}> 
             <AppBar position="static">
                 <Toolbar>
                     <Box padding={2}>

@@ -5,11 +5,15 @@
 }
 
 body{
-  overflow: hidden
+  overflow: hidden !important;
+  justify-content: flex-start;
 }
+
+
 
 .App {
   text-align: center;
+  justify-content: flex-start;
 }
 
 .App-logo {

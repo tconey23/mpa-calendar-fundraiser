@@ -20,7 +20,7 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
 
     const checkString = async (str) => /[^a-zA-Z0-9]/.test(str);
     const webMed = useMediaQuery('(min-width:900px)')
-
+    const webSml = useMediaQuery('(max-width:232px )')
 
     const validateEntry = async (str, fld, id) => {
         const val = await checkString(str)
@@ -79,18 +79,20 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
             checkCredentials()
         }
 
-    }, [childFirst, childLast, password, username])
+        console.log(webSml)
+
+    }, [childFirst, childLast, password, username, webSml])
     
   return (
-    <Stack direction={'column'} sx={{ height: '79vh', width: '100%', borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} paddingTop={3} justifyContent={'flex-start'} alignItems={'center'}>
-        <Stack direction={'column'} sx={{scale: webMed? 1 : 0.75, padding: 1, borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} width={"98vw"} justifyContent={'center'} alignItems={'center'}>
-            <Typography fontSize={webMed? 20 : 10}>Enter your child's <i>full</i> first and last name, as well as the last name of their <i>lead</i> teacher</Typography>
+    <Stack direction={'column'} sx={{ height: '79vh', width: '100%', borderColor:'white', borderStyle: 'solid', borderWidth: '1px', overflow: webMed ? 'hidden' : 'auto'}} paddingTop={3} justifyContent={'flex-start'} alignItems={'center'}>
+        <Stack direction={'column'} sx={{scale: webMed? 1 : 0.75, padding: 1, borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} width={webMed ? "90vw" : "98vw"} justifyContent={'center'} alignItems={'center'}>
+            <Typography textAlign={'center'} fontSize={webMed? 20 : 10}>Enter your child's <i>full</i> first and last name, as well as the last name of their <i>lead</i> teacher</Typography>
             <i>
-                <Typography fontSize={webMed? 20 : 10}>**Do not include any spaces or symbols (hyphen, apostrophe etc.)**</Typography>
+                <Typography textAlign={'center'} fontSize={webMed? 20 : 10}>**Do not include any spaces or symbols (hyphen, apostrophe etc.)**</Typography>
             </i>
             <Box
             component="form"
-            sx={{ '& > :not(style)': { m: 1, width: '25ch' }}}
+            sx={{ '& > :not(style)': { m: 1, width: webSml ? '90%' : '100%'}, display: 'flex', flexDirection: webMed ? 'row': 'column'}}
             noValidate
             autoComplete="off"
             >
