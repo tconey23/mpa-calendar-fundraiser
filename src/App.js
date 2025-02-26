@@ -6,9 +6,6 @@ import { lightPalette, darkPalette } from './business/palette'
 import AppHeader from './components/AppHeader';
 import { useState } from 'react';
 import StudentPage from './components/StudentPage';
-import HomePage from './components/HomePage';
-import BreadCrumbs from './components/BreadCrumbs';
-import results from './business/CsvParse';
 import LoginFields from './components/LoginFields';
 
 function App() {
@@ -38,7 +35,7 @@ function App() {
             alignItems="center"
             padding={3}
           >
-            <Typography sx={{fontSize: 30}}>Thank you for supporting the Montessori Peaks Academy PTA!</Typography>
+            <Typography sx={{fontSize: 30}}>Thank you for supporting the new MPA playground!</Typography>
             {!loggedIn && 
             <Stack>
               <LoginFields loggedIn={loggedIn} setLoggedIn={setLoggedIn} setSelectedStudent={setSelectedStudent}/>

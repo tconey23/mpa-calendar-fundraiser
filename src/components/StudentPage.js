@@ -79,6 +79,10 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
 
   }
 
+  const upperCaseName = (str) =>{
+    return str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+  }
+
   return (
     <Stack
       direction='column'
@@ -103,7 +107,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         <Box sx={{display: 'flex'}}>
             <Avatar>{selectedStudent[0]}</Avatar>
             <Typography sx={{textDecoration: 'underline', marginBottom: 2, fontSize: 'clamp(10px, 5vw, 50px)', marginLeft: 1}} color="text.secondary" variant="h3">
-                {selectedStudent}
+                {upperCaseName(selectedStudent)}
             </Typography>
         </Box>
       </Stack>
