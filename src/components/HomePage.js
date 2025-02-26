@@ -22,7 +22,7 @@ const HomePage = ({ students, setSelectedStudent, selectedStudent }) => {
   }, [students]);
 
   return (
-    <Stack direction={webMed ? 'row' : 'column'} sx={{width: '100%', height: '100%'}}>
+    <Stack direction={webMed ? 'row' : 'column'} sx={{width: '100%', height: '100%'}}> 
       {webMed && 
         <Stack direction={'column'} justifyContent={'center'} alignItems={'center'} width={'50vw'} height={'75vh'}>
           <MediaDisplay />

@@ -7,7 +7,7 @@ import Paypal from './Paypal';
 import {Avatar} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery'
 
-const StudentPage = ({ selectedStudent }) => {
+const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => { 
   const [disabledDates, setDisabledDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [message, setMessage] = useState('');
@@ -15,7 +15,7 @@ const StudentPage = ({ selectedStudent }) => {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [donateAmount, setDonateAmount] = useState('$0.00')
   const [transactionStatus, setTransactionStatus] = useState(null)
-  const [isReserving, setIsReserving] = useState(true)
+  const [isReserving, setIsReserving] = useState(false)
 
   const webMed = useMediaQuery('(min-width:900px)')
 
@@ -72,6 +72,13 @@ const StudentPage = ({ selectedStudent }) => {
     }
   }, [isReserving])
 
+  const logOut = () => {
+
+    setSelectedStudent(null)
+    setLoggedIn(false)
+
+  }
+
   return (
     <Stack
       direction='column'
@@ -87,12 +94,19 @@ const StudentPage = ({ selectedStudent }) => {
       borderColor="primary.contrastText"
       padding={5}
     >
+      <Stack direction={'row'} width={'100%'}>
+        <Stack justifySelf={'flex-start'}>
+          <Button variant="contained" onClick={() => logOut()}>Back</Button>
+        </Stack>
+      </Stack>
+      <Stack direction={'row'}>
         <Box sx={{display: 'flex'}}>
             <Avatar>{selectedStudent[0]}</Avatar>
             <Typography sx={{textDecoration: 'underline', marginBottom: 2, fontSize: 'clamp(10px, 5vw, 50px)', marginLeft: 1}} color="text.secondary" variant="h3">
                 {selectedStudent}
             </Typography>
         </Box>
+      </Stack>
 
       <Stack
         direction={webMed ? 'row' : 'column'}

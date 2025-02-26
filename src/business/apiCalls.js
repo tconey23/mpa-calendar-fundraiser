@@ -17,6 +17,34 @@ const studentData = async () => {
     }
 };
 
+const studentCredentials = async (password, username) => { 
+
+    // let password, username
+
+    // username = 'maximusconey'
+    // password = 'burch'
+
+    try {
+        const dbRef = ref(database, 'student_credentials');
+        const snapshot = await get(dbRef);
+        if (snapshot.exists()) {
+            const result = snapshot.val().find((c) => c.password === password && c.username === username)
+            if(result) {
+                console.log(result)
+                return true
+            } else {
+                return false
+            }
+        } else {
+            console.log('No data available');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error; 
+    }
+};
+
 const studentDates = async (student) => {
     try {
         const dbRef = ref(database, `Students`);
@@ -61,4 +89,4 @@ const addStudentDate = async (data) => {
 
 }
 
-export { studentData, studentDates, addStudentDate };
+export { studentData, studentDates, addStudentDate, studentCredentials };

@@ -1,5 +1,9 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
 
+.css-15umtxl-MuiPickersArrowSwitcher-root{
+  display: none !important;
+}
+
 body{
   overflow: hidden
 }

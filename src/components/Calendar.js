@@ -9,6 +9,7 @@ import ProgressCircle from './ProgressCircle';
 
 const Calendar = ({ disabledDates, setSelectedDate }) => {
     const [date] = useState(new Date().toLocaleDateString());
+    
 
     const formatDate = (date) => dayjs(date).format('MM-DD-YYYY');
 
@@ -49,7 +50,7 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
                 <Suspense fallback={<ProgressCircle />}>
                     <DateCalendar
                         views={['day']}
-                        value={dayjs(date)}
+                        value={dayjs('2024-03-01')}
                         onChange={(newValue) => handleDateSelect(newValue)}
                         slotProps={{
                             day: (dayProps) => {

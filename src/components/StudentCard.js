@@ -42,17 +42,17 @@ const StudentCard = ({ student, webMed, setSelectedStudent }) => {
       <Avatar sx={{backgroundColor: 'primary.avatar', color: 'text.avatar'}}>{`${student.FIRST[0]}${student.LAST[0]}`}</Avatar>
       <Stack width={'100%'} marginLeft={1}>
         <Typography>{`${student.FIRST} ${student.LAST}`}</Typography>
-        <Typography marginTop="4px" fontWeight="bold">
+        {/* <Typography marginTop="4px" fontWeight="bold">
           {formatCurrency(studentTotal)}
-        </Typography>
-        <Slider
+        </Typography> */}
+        {/* <Slider
           sx={{ marginTop: '8px' }}
           disabled
           valueLabelDisplay={webMed ? 'off' : 'off'}
           value={studentTotal}
           aria-label="Disabled slider"
           valueLabelFormat={formatCurrency(studentTotal)}
-        />
+        /> */}
       </Stack>
     </Stack>
   );

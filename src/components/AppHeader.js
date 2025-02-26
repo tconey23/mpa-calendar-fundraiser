@@ -18,7 +18,7 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
         try {
             const list = await studentData();
             setStudents(list);
-            console.log(list)
+            // console.log(list)
         } catch (error) {
             console.error('Error fetching student list:', error);
         }
