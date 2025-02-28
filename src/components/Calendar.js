@@ -55,7 +55,7 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
                 <Suspense fallback={<ProgressCircle />}>
                     <DateCalendar
                         views={['day']}
-                        value={dayjs('2024-03-01')}
+                        value={dayjs('2025-03-01')}
                         onChange={(newValue) => handleDateSelect(newValue)}
                         slotProps={{
                             day: (dayProps) => {

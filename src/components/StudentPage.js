@@ -6,53 +6,21 @@ import dayjs from 'dayjs';
 import Paypal from './Paypal';
 import {Avatar} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery'
+import DonationForm from './DonationForm';
+import DirectDonationForm from './DirectDonationForm';
+import SuccessAlert from './SuccessAlert';
 
 const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => { 
   const [disabledDates, setDisabledDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [message, setMessage] = useState('');
-  const [name, setName] = useState('');
   const [refreshTrigger, setRefreshTrigger] = useState(0);
-  const [donateAmount, setDonateAmount] = useState('$0.00')
-  const [transactionStatus, setTransactionStatus] = useState(null)
   const [isReserving, setIsReserving] = useState(false)
-  const [toggleName, setToggleName] = useState(false)
-  const [toggleMessage, setToggleMessage] = useState(false)
-  const [checkName, setCheckName] = useState()
-
-
-
-  const nameRequired = () => {
-
-    if(toggleName && name) {
-      return true
-    }
-
-    if(!toggleName){
-      return true
-    }
-
-    return false
-
-  }
-
-  const messageRequired = () => {
-
-    if(toggleMessage && message) {
-      return true
-    }
-
-    if(!toggleMessage){
-      return true
-    }
-
-    return false
-  }
-
+  const [donationType, setDonationType] = useState('date')
+  const [success, setSuccess] = useState(false)
+  
 
   const webMed = useMediaQuery('(min-width:900px)')
 
-  const formatDate = (date) => dayjs(date).format('DD')
 
   const getStudentDates = async () => {
     const dates = await studentDates(selectedStudent);
@@ -63,40 +31,14 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
     }
   };
 
-  const resetData = () => {
-    setRefreshTrigger((prev) => prev + 1);
-  };
 
-  const handleAddDate = async () => {
-    const reservation = {
-      date: {
-        [selectedDate.date]: {
-          reserved: true,
-          message,
-          name,
-          dollarAmount: donateAmount
-        },
-      },
-      student: selectedStudent,
-    };
-
-    await addStudentDate(reservation);
-    resetData();
-  };
 
   useEffect(() => {
     getStudentDates();
     setSelectedDate(null);
   }, [selectedStudent, refreshTrigger]);
 
-  useEffect(() => {
-    if(selectedDate){
-      console.log(selectedDate)
-        setTransactionStatus(null)
-      let dateNum = formatDate(new Date(selectedDate.date))
-      dateNum[0] == 0 ? setDonateAmount(`${dateNum[1]}`) : setDonateAmount(`${dateNum}`)
-    }
-  }, [selectedDate])
+ 
 
   useEffect(() => {
     if(isReserving){
@@ -116,6 +58,14 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   const upperCaseName = (str) =>{
     return str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
   }
+
+  useEffect(() => {
+    if(success) {
+      setTimeout(() => {
+        setSuccess(false)
+      }, 3000);
+    }
+  }, [success])
 
   return (
     <Stack
@@ -181,88 +131,36 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
           alignItems="center"
           sx={{ height: '98%', width: webMed ? '50%' : '100%'}}
         >
-          {selectedDate && (
-            <>
-              <Typography key={selectedDate.date} variant="h4">
-                {selectedDate.date}
-              </Typography>
 
-              {selectedDate.reserved ? (
-                <>
-                  <Typography padding={1} variant="h5">
-                    Reserved by: {selectedDate.reserved.name}
-                  </Typography>
-                  <Typography padding={1} variant="h6">
-                    Message: {selectedDate.reserved.message}
-                  </Typography>
-                </>
-              ) : (
-                <FormControl sx={{ width: '100%' }}>
-                  <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
-                    <Checkbox onChange={() => setToggleName(prev => !prev)}/>
-                    {toggleName ? <TextField
-                      label='Your name'
-                      required
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Your name"
-                    /> :
-                    <Typography>Include Name?</Typography>
-                  }
-                  </Box>
-                  <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
-                    <Checkbox onChange={() => setToggleMessage(prev => !prev)}/> 
-                    {toggleMessage ? 
-                    
-                    <TextField
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      sx={{ width: '100%' }}
-                      required
-                      fullWidth
-                      multiline
-                      label="Your Message"
-                      maxRows={4}
-                    /> : 
-                    <Typography>Include Message?</Typography>
-                  } 
-                  </Box>
-                  <Box padding={2}>
-                    <TextField
-                      value={`$${donateAmount}.00`}
-                      disabled
-                      placeholder="Donation Amount"
-                      maxRows={4}
-                    />
-                  </Box>
-                {!transactionStatus && nameRequired() && messageRequired() &&
-                    <Paypal setTransactionStatus={setTransactionStatus} donateAmount={donateAmount}/>
-                }
-                {transactionStatus === 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='success'>
-                    <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
-                    <Typography>Please proceed with your reservation</Typography>
-                </Alert>
-                }
-                {/* {transactionStatus !== 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='error'>
-                    <Typography>{`We're sorry there was an error in your request. Your payment could not be completed`}</Typography>
-                </Alert>
-                } */}
-                
-                </FormControl>
-              )}
+          {!success && !selectedDate && donationType === 'date' &&
+            <Stack height={'100%'} width={'75%'} justifyContent={'center'} alignItems={'center'}>
+              <Typography textAlign={'center'} sx={{marginBottom: 2}}>{`To donate, select a date from the calendar.`}</Typography>
+              <Typography textAlign={'center'} sx={{marginBottom: 2}}>{`The selected date will reflect the donation amount. A donation for the 1st will be $1 and a donation for the 2nd will be $2 etc.`}</Typography>
+              <Typography textAlign={'center'} sx={{marginBottom: 2}}>
+                {`If the date you want is already reserved, no worries! You can enter a custom donation amount by clicking:`}
+                  <br></br>
+                  <Button onClick={() => setDonationType('direct')} variant='contained'>HERE</Button>
+                </Typography>
+            </Stack>
+          }
 
-              <Tooltip title={selectedDate.reserved ? 'This date has already been reserved' : ''}>
-                <Box padding={2}>
-                  {transactionStatus === 'COMPLETED' && <Button
-                    onClick={handleAddDate}
-                    disabled={selectedDate.reserved}
-                    variant="contained"
-                  >
-                    Reserve
-                  </Button>}
-                </Box>
-              </Tooltip>
-            </>
+          {!success && !selectedDate && donationType === 'direct' && 
+            <DirectDonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={selectedStudent} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
+          }
+
+
+          {!success && selectedDate && donationType === 'date' &&(
+           <DonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={selectedStudent} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
           )}
+
+
+          {success && 
+            <Stack width={'100%'} height={'100%'} sx={{opacity: 1, transition: 'opacity 2s ease-in-out'}}>
+              <SuccessAlert />
+            </Stack>
+          }
+
+
         </Stack>
       </Stack>
     </Stack>

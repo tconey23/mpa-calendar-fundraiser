@@ -36,9 +36,9 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
         <Box width={'100vw'} sx={{ flexGrow: 1 }}> 
             <AppBar position="static">
                 <Toolbar>
-                    <Box padding={2}>
+                    {/* <Box padding={2}>
                         <i className="fi fi-br-menu-burger"></i>
-                    </Box>
+                    </Box> */}
                    <Box padding={0.5} justifyContent={'center'} alignItems={'center'} width={'100%'} display={'flex'}>
                     <img style={{padding: 2, height: 'clamp(10vh, 10vw, 75px)', backgroundColor: isDarkMode && 'white'}} src={PTALogo}/>
                    </Box>
