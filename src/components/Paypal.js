@@ -17,8 +17,15 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
       const [message, setMessage] = useState("");
       const [YOUR_PRODUCT_ID] = useState(12345)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
+
+      const [isDev, setIsDev] = useState(false);
+      const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       
-    
+      useEffect(() => {
+        setEndpoint(isDev ? "http://localhost:8888/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
+      }, [isDev]);
+      
+
       return (
         <div className="App">
           <PayPalScriptProvider options={initialOptions}>
@@ -29,7 +36,7 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
               }}
               createOrder={async () => {
                 try {
-                  const response = await fetch("http://localhost:8888/api/orders", {
+                  const response = await fetch(`${endpoint}/orders`, {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/json",
@@ -68,7 +75,7 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
               onApprove={async (data, actions) => {
                 try {
                   const response = await fetch(
-                    `http://localhost:8888/api/orders/${data.orderID}/capture`,
+                    `${endpoint}/orders/${data.orderID}/capture`,
                     {
                       method: "POST",
                       headers: {

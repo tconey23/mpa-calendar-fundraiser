@@ -2,17 +2,17 @@ import { useEffect, useState } from 'react';
 import { Stack, Box, Button, Typography } from '@mui/material';
 import { studentCredentials } from '../business/apiCalls';
 import TextField from '@mui/material/TextField';
-import { child } from 'firebase/database';
 import MediaDisplay from './MediaDisplay';
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 
+
 const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
 
-    const [childFirst, setChildFirst] = useState(null)
-    const [childLast, setChildLast] = useState(null)
+    const [childFirst, setChildFirst] = useState('maximus')
+    const [childLast, setChildLast] = useState('coney')
+    const [password, setPassword] = useState('burch')
     const [errorFields, setErrorFields] = useState([])
-    const [password, setPassword] = useState(null)
     const [username, setUserName] = useState(null)
     const [errors, setErrors] = useState([])
     const [toggleError, setToggleError] = useState(null)

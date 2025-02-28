@@ -30,6 +30,11 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
                 date: selectedDate,
                 reserved: getCustomTitle(selectedDate)
             });
+
+            // setSelectedDate({
+            //     "date": "03-02-2024",
+            //     "reserved": null
+            // });
         }, 200);
     };
 

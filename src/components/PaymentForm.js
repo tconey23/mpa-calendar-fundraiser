@@ -9,8 +9,12 @@ import {
 } from "@paypal/react-paypal-js";
 
 async function createOrderCallback() {
+
+  const endpoint = 'https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api/orders'
+  const testEndpoint = 'http://localhost:8888/api/orders'
+
   try {
-    const response = await fetch("http://localhost:8888/api/orders", {
+    const response = await fetch(endpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

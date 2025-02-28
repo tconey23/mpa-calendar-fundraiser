@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Button, FormControl, OutlinedInput, Stack, TextField, Tooltip, Typography, Alert, InputLabel } from '@mui/material';
+import { Box, Button, FormControl, OutlinedInput, Stack, TextField, Tooltip, Typography, Alert, Checkbox } from '@mui/material';
 import Calendar from './Calendar';
 import { studentDates, addStudentDate } from '../business/apiCalls';
 import dayjs from 'dayjs';
@@ -16,6 +16,39 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   const [donateAmount, setDonateAmount] = useState('$0.00')
   const [transactionStatus, setTransactionStatus] = useState(null)
   const [isReserving, setIsReserving] = useState(false)
+  const [toggleName, setToggleName] = useState(false)
+  const [toggleMessage, setToggleMessage] = useState(false)
+  const [checkName, setCheckName] = useState()
+
+
+
+  const nameRequired = () => {
+
+    if(toggleName && name) {
+      return true
+    }
+
+    if(!toggleName){
+      return true
+    }
+
+    return false
+
+  }
+
+  const messageRequired = () => {
+
+    if(toggleMessage && message) {
+      return true
+    }
+
+    if(!toggleMessage){
+      return true
+    }
+
+    return false
+  }
+
 
   const webMed = useMediaQuery('(min-width:900px)')
 
@@ -58,6 +91,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
 
   useEffect(() => {
     if(selectedDate){
+      console.log(selectedDate)
         setTransactionStatus(null)
       let dateNum = formatDate(new Date(selectedDate.date))
       dateNum[0] == 0 ? setDonateAmount(`${dateNum[1]}`) : setDonateAmount(`${dateNum}`)
@@ -164,15 +198,21 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
                 </>
               ) : (
                 <FormControl sx={{ width: '100%' }}>
-                  <Box padding={2}>
-                    <TextField
+                  <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
+                    <Checkbox onChange={() => setToggleName(prev => !prev)}/>
+                    {toggleName ? <TextField
                       label='Your name'
                       required
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your name"
-                    />
+                    /> :
+                    <Typography>Include Name?</Typography>
+                  }
                   </Box>
-                  <Box padding={2}>
+                  <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
+                    <Checkbox onChange={() => setToggleMessage(prev => !prev)}/> 
+                    {toggleMessage ? 
+                    
                     <TextField
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
@@ -182,7 +222,9 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
                       multiline
                       label="Your Message"
                       maxRows={4}
-                    />
+                    /> : 
+                    <Typography>Include Message?</Typography>
+                  } 
                   </Box>
                   <Box padding={2}>
                     <TextField
@@ -192,18 +234,18 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
                       maxRows={4}
                     />
                   </Box>
-                {!transactionStatus && message && name &&
+                {!transactionStatus && nameRequired() && messageRequired() &&
                     <Paypal setTransactionStatus={setTransactionStatus} donateAmount={donateAmount}/>
                 }
-                {transactionStatus === 'COMPLETED' && message && name && <Alert severity='success'>
+                {transactionStatus === 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='success'>
                     <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
                     <Typography>Please proceed with your reservation</Typography>
                 </Alert>
                 }
-                {transactionStatus !== 'COMPLETED' && message && name && <Alert severity='error'>
+                {/* {transactionStatus !== 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='error'>
                     <Typography>{`We're sorry there was an error in your request. Your payment could not be completed`}</Typography>
                 </Alert>
-                }
+                } */}
                 
                 </FormControl>
               )}
