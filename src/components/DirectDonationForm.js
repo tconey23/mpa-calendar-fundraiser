@@ -23,6 +23,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
     const [rawDonateAmount, setRawDonateAmount] = useState(null)
     const [isReady, setIsReady] = useState(false)
     
+    const webMed = useMediaQuery('(min-width:900px)')
 
     const nameRequired = () => {
 
@@ -114,8 +115,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
       }
 
   return (
-    <Stack>
-
+    <Stack sx={{scale: webMed ? 1 : 0.75}}>
               <Typography variant="h6">
                 Custom Donation Amount
               </Typography>
@@ -159,10 +159,10 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
                       fullWidth
                     />
                     {!transactionStatus &&
-                      <Box padding={2}>
-                    {donateAmount && <Button onClick={() => setIsReady(true)} variant='contained'>Confirm Amount</Button>}
-                    <Button onClick={() => cancelDirectDonate()} variant='contained'>Cancel</Button>
-                    </Box>
+                    <Stack padding={2} sx={{scale: webMed ? 1 : 0.75}}>
+                      {donateAmount && <Button sx={{marginBottom: 1}} onClick={() => setIsReady(true)} variant='contained'>Confirm Amount</Button>}
+                      <Button onClick={() => cancelDirectDonate()} variant='contained'>Cancel</Button>
+                    </Stack>
                     }
                   </Box>
                 {!transactionStatus && nameRequired() && messageRequired() && rawDonateAmount && isReady &&

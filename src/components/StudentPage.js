@@ -17,6 +17,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   const [isReserving, setIsReserving] = useState(false)
   const [donationType, setDonationType] = useState('date')
   const [success, setSuccess] = useState(false)
+  const [displayCalendar, setDisplayCalendar] = useState(true)
   
 
   const webMed = useMediaQuery('(min-width:900px)')
@@ -31,6 +32,15 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
     }
   };
 
+  useEffect(() => {
+    if(!webMed && donationType === 'direct'){
+      setDisplayCalendar(false)
+    }
+
+    if(!webMed && donationType === 'date'){
+      setDisplayCalendar(true)
+    }
+  }, [donationType, webMed])
 
 
   useEffect(() => {
@@ -78,52 +88,59 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         borderWidth: 1,
         borderStyle: 'solid',
         borderRadius: 5,
+        overflowY: webMed ? 'hidden' : 'scroll',
+        overflowX : 'hidden'
       }}
       borderColor="primary.contrastText"
-      padding={5}
+      paddingLeft={2}
+      paddingRight={2}
     >
-      <Stack direction={'row'} width={'100%'}>
-        <Stack justifySelf={'flex-start'}>
-          <Button variant="contained" onClick={() => logOut()}>Back</Button>
+
+      <Stack direction={webMed ? 'row' : 'column'} width={'100%'} justifyContent={'flex-start'}>
+        <Stack justifySelf={webMed ? 'center' : 'flex_start'} paddingBottom={1}>
+          <Button sx={{scale: webMed ? 1 : 0.5}} variant="contained" onClick={() => logOut()}>Back</Button>
         </Stack>
       </Stack>
+
       <Stack direction={'row'}>
         <Box sx={{display: 'flex'}}>
-            <Avatar>{selectedStudent[0]}</Avatar>
-            <Typography sx={{textDecoration: 'underline', marginBottom: 2, fontSize: 'clamp(10px, 5vw, 50px)', marginLeft: 1}} color="text.secondary" variant="h3">
+            {/* <Avatar sx={{display: webMed ? 'block' : 'none'}}>{selectedStudent[0]}</Avatar> */}
+            <Typography sx={{textDecoration: 'underline', marginBottom: 2, fontSize: webMed ? 40 : 20, marginLeft: 1}} color="text.secondary" variant="h3">
                 {upperCaseName(selectedStudent)}
             </Typography>
         </Box>
       </Stack>
 
       <Stack
-        direction={webMed ? 'row' : 'column'}
+        direction={webMed ? 'row' : 'column-reverse'}
         justifyContent="flex-start"
         alignItems="center"
-        sx={{ height: '98%', width: '100%', overflowY: 'scroll', boxShadow: 'inset 0px 0px 16px 0px #00000042'}}
+        sx={{ height: webMed ? '98%' : '200%', boxShadow: 'inset 0px 0px 16px 0px #00000042'}}
         padding={2}
       >
         <Stack sx={{minHeight: '50px'}}>
             {isReserving && <Alert severity='success'>Your date has been reserved!</Alert>}
         </Stack>
         
+        {displayCalendar && 
         <Stack
           direction="column"
           justifyContent="flex-start"
           alignItems="center"
-          sx={{ height: '98%', width: webMed ? '50%' : '100%' }}
+          sx={{ height: '98%', width: webMed ? '50%' : '100%', scale: webMed ? 1 : 0.75}}
         >
           <Box display="flex" flexDirection={webMed ? 'column' : 'row'} paddingBottom={0}>
             <i className="fi fi-ss-circle" style={{ color: 'green', marginRight: 30}}> Reserved</i>
-            <i className="fi fi-ss-circle" style={{ color: 'rgb(1 99 196)' }}> Today</i>
+            {/* <i className="fi fi-ss-circle" style={{ color: 'rgb(1 99 196)' }}> Today</i> */}
           </Box>
-          <Stack justifyContent={'center'} alignItems={'center'} sx={{height: webMed ? '100%' : '100%', width: '100%'}}>
+          
+          <Stack justifyContent={'center'} alignItems={'center'} sx={{height: '100%', width: '100%'}}>
             <Calendar
                 disabledDates={disabledDates}
                 setSelectedDate={setSelectedDate}
             />
           </Stack>
-        </Stack>
+        </Stack>}
 
         <Stack
           direction="column"
@@ -134,12 +151,12 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
 
           {!success && !selectedDate && donationType === 'date' &&
             <Stack height={'100%'} width={'75%'} justifyContent={'center'} alignItems={'center'}>
-              <Typography textAlign={'center'} sx={{marginBottom: 2}}>{`To donate, select a date from the calendar.`}</Typography>
-              <Typography textAlign={'center'} sx={{marginBottom: 2}}>{`The selected date will reflect the donation amount. A donation for the 1st will be $1 and a donation for the 2nd will be $2 etc.`}</Typography>
-              <Typography textAlign={'center'} sx={{marginBottom: 2}}>
+              <Typography fontSize={webMed ? 15 : 10} textAlign={'center'} sx={{marginBottom: 2}}>{`To donate, select a date from the calendar.`}</Typography>
+              <Typography fontSize={webMed ? 15 : 10} textAlign={'center'} sx={{marginBottom: 2}}>{`The selected date will reflect the donation amount. A donation for the 1st will be $1 and a donation for the 2nd will be $2 etc.`}</Typography>
+              <Typography fontSize={webMed ? 15 : 10} textAlign={'center'} sx={{marginBottom: 2}}>
                 {`If the date you want is already reserved, no worries! You can enter a custom donation amount by clicking:`}
                   <br></br>
-                  <Button onClick={() => setDonationType('direct')} variant='contained'>HERE</Button>
+                  <Button sx={{scale: webMed ? 1 : 0.5}} onClick={() => setDonationType('direct')} variant='contained'>HERE</Button>
                 </Typography>
             </Stack>
           }

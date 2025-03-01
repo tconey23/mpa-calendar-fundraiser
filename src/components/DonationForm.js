@@ -17,6 +17,8 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
 
     const formatDate = (date) => dayjs(date).format('DD')
 
+    const webMed = useMediaQuery('(min-width:900px)')
+
     useEffect(() => {
         if(selectedDate){
           console.log(selectedDate)
@@ -78,11 +80,11 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
 
 
   return (
-    <Stack>
+    <Stack justifyContent={'center'} alignItems={'center'}>
 
-            {!transactionStatus && <Button variant='contained' onClick={() => setSelectedDate(null)}>Clear Selected Date</Button>
+            {!transactionStatus && <Button sx={{scale: webMed ? 1 : 0.75}} variant='contained' onClick={() => setSelectedDate(null)}>Clear Selected Date</Button>
 }
-            <Typography key={selectedDate.date} variant="h4">
+            <Typography key={selectedDate.date} variant={webMed ? 'h4' : 'h6'}>
                 {selectedDate.date}
               </Typography>
 

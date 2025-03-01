@@ -39,7 +39,7 @@ function App() {
             padding={3}
             sx={{overflow: webMed ? 'hidden' : 'auto', height: webMed ? '100vh' : '200vh'}}
           >
-            <Typography sx={{fontSize: 30, textAlign: 'center'}}>Thank you for supporting the new MPA playground!</Typography>
+            <Typography sx={{fontSize: webMed ? 30 : 15, textAlign: 'center'}}>Thank you for supporting the new MPA playground!</Typography>
             {!loggedIn && 
             <Stack>
               <LoginFields loggedIn={loggedIn} setLoggedIn={setLoggedIn} setSelectedStudent={setSelectedStudent}/>
