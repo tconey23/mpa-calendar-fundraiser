@@ -16,7 +16,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [isReserving, setIsReserving] = useState(false)
   const [donationType, setDonationType] = useState('date')
-  const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(true)
   const [displayCalendar, setDisplayCalendar] = useState(true)
   
 
@@ -116,6 +116,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         justifyContent="flex-start"
         alignItems="center"
         sx={{ height: webMed ? '98%' : '200%', boxShadow: 'inset 0px 0px 16px 0px #00000042'}}
+        width={'100%'}
         padding={2}
       >
         <Stack sx={{minHeight: '50px'}}>
@@ -162,12 +163,12 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
           }
 
           {!success && !selectedDate && donationType === 'direct' && 
-            <DirectDonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={selectedStudent} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
+            <DirectDonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={upperCaseName(selectedStudent)} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
           }
 
 
           {!success && selectedDate && donationType === 'date' &&(
-           <DonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={selectedStudent} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
+           <DonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={upperCaseName(selectedStudent)} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
           )}
 
 
