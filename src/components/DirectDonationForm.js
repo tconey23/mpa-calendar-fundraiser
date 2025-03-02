@@ -186,7 +186,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
                     
                     variant="contained"
                   >
-                    Reserve
+                    Done
                   </Button>}
                 </Box>
     </Stack>

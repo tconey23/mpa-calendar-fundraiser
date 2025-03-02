@@ -7,8 +7,12 @@ function Message({ content }) {
   }
 
 const Paypal = ({donateAmount, setTransactionStatus}) => {
+  //AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo
+
+    const [clientID] = useState('test')
+
     const initialOptions = {
-        "client-id": "test",
+        "client-id": clientID,
         "enable-funding": "card",
         "disable-funding": "paylater,venmo",
         "data-sdk-integration-source": "integrationbuilder_sc",
