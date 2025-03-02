@@ -18,17 +18,12 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
       const [YOUR_PRODUCT_ID] = useState(12345)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
-      const [isDev, setIsDev] = useState(false);
+      const [isDev] = useState(true);
       const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       
       useEffect(() => {
-        setEndpoint(isDev ? "http://localhost:8888/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
+        setEndpoint(isDev ? "http://localhost:3002/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       }, [isDev]);
-
-      useEffect(() => {
-        console.clear()
-        console.log(typeof donateAmount, donateAmount)
-      }, [donateAmount])
       
 
       return (

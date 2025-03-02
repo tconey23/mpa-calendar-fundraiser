@@ -9,9 +9,9 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 
 const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
 
-    const [childFirst, setChildFirst] = useState(null)
-    const [childLast, setChildLast] = useState(null)
-    const [password, setPassword] = useState(null)
+    const [childFirst, setChildFirst] = useState('')
+    const [childLast, setChildLast] = useState('')
+    const [password, setPassword] = useState('')
     const [errorFields, setErrorFields] = useState([])
     const [username, setUserName] = useState(null)
     const [errors, setErrors] = useState([])

@@ -30,11 +30,6 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
                 date: selectedDate,
                 reserved: getCustomTitle(selectedDate)
             });
-
-            // setSelectedDate({
-            //     "date": "03-02-2024",
-            //     "reserved": null
-            // });
         }, 200);
     };
 
@@ -59,16 +54,13 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
                         onChange={(newValue) => handleDateSelect(newValue)}
                         slotProps={{
                             day: (dayProps) => {
+                                const { isMonthSwitchingAnimating, focusedDay, currentMonth, slideDirection, disablePast, disableFuture, maxDate, minDate, gridLabelId, slotProps, onMonthSwitchingAnimationEnd,  ...restDayProps } = dayProps;
                                 const isSpecialDate = disabledDates?.some(
-                                    (disabledDate) =>
-                                        disabledDate[0] ===
-                                    formatDate(dayProps.day)
+                                    (disabledDate) => disabledDate[0] === formatDate(dayProps.day)
                                 );
-                                
                                 const title = getCustomTitle(dayProps.day);
                                 
                                 return {
-                                    ...dayProps,
                                     children: isSpecialDate ? (
                                         <StyledSpecialDay title={title}>
                                             {dayProps.day.format('D')}
