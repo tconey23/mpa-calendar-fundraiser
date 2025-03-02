@@ -146,7 +146,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
           direction="column"
           justifyContent="flex-start"
           alignItems="center"
-          sx={{ height: '98%', width: webMed ? '50%' : '100%'}}
+          sx={{ height: '98%', width: webMed ? '50%' : '100%', overflow: 'auto'}}
         >
 
           {!success && !selectedDate && donationType === 'date' &&
