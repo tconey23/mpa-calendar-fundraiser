@@ -13,7 +13,7 @@ function Message({ content }) {
 const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
   //AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo
 
-    const [clientID] = useState('test')
+    const [clientID] = useState('AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo')
 
     const initialOptions = {
         "client-id": clientID, 
