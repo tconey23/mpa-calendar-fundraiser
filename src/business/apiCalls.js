@@ -154,4 +154,8 @@ const fetchStudentDetail = async (data) => {
     }
 }
 
+const adminVal = () => {
+    
+}
+
 export { studentData, studentDates, addStudentDate, studentCredentials, debugUsers, fetchStudentDetail};

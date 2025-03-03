@@ -38,22 +38,25 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn, isDarkM
   const getReserved = async () => {
     try {
         const res = await fetchStudentDetail(selectedStudent)
-        console.log(res)
-
-        res.forEach((dt) => {
-          setReservedDates(prev => [
-            ...prev,
-            dt
-          ])
-        })
-
-        const total = res.reduce((acc, dt) => {
-          return acc + parseFloat(dt.dollarAmount.replace('$', ''));
-      }, 0);
-      
-      setTotalRaised(`$${parseInt(total).toFixed(2)}`) 
-
-        setReservedDates(res)
+        
+        if(res && res[0] !== "N") {
+          console.log(res)
+          
+          res.forEach((dt) => {
+            setReservedDates(prev => [
+              ...prev,
+              dt
+            ])
+          })
+          
+          const total = res.reduce((acc, dt) => {
+            return acc + parseFloat(dt.dollarAmount.replace('$', ''));
+          }, 0);
+          
+          setTotalRaised(`$${parseInt(total).toFixed(2)}`) 
+          
+          setReservedDates(res)
+        }
     } catch (error) {
         console.log(error);
     }

@@ -14,7 +14,7 @@ function App() {
   const [selectedStudent, setSelectedStudent] = useState(null)
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [loggedIn, setLoggedIn] = useState(false)
-  const [version] = useState('4.1')
+  const [version] = useState('4.2')
 
   const webMed = useMediaQuery('(min-width:900px)')
 
