@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter initialEntries={["/home"]}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Stack sx={{overflow: webMed ? 'hidden' : 'auto'}} direction="column" justifyContent="center" alignItems={'center'} width={'100%'}>
+        <Stack sx={{overflow: webMed ? 'hidden' : 'auto'}} direction="column" justifyContent="center" alignItems={'center'} width={'100%'} height={'100vh'}>
           <AppHeader
             students={students}
             setStudents={setStudents}
