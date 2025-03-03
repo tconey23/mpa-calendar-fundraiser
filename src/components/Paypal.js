@@ -8,7 +8,7 @@ function Message({ content }) {
 
 const Paypal = ({donateAmount, setTransactionStatus}) => {
     const initialOptions = {
-        "client-id": "test",
+        "client-id": "AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo",
         "enable-funding": "card",
         "disable-funding": "paylater,venmo",
         "data-sdk-integration-source": "integrationbuilder_sc",
@@ -18,7 +18,7 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
       const [YOUR_PRODUCT_ID] = useState(12345)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
-      const [isDev, setIsDev] = useState(false);
+      const [isDev, setIsDev] = useState(true);
       const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       
       useEffect(() => {
