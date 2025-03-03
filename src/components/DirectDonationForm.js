@@ -115,10 +115,10 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
         let student = selectedStudent?.replace(' ', '').toLowerCase()
 
         let donor
-        name ? donor = name.replace(' ', '') : donor = 'Anon'
+        name ? donor = name.replace(' ', '_') : donor = 'Anon'
 
         let idNum = hashDate(Date.now())
-        let orderId = `${donor}:${student}:${idNum}` 
+        let orderId = `${donor}:${student}:${idNum}`
 
 
         console.log(orderId)
