@@ -4,7 +4,7 @@ import { Stack, CssBaseline, Typography, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightPalette, darkPalette } from './business/palette' 
 import AppHeader from './components/AppHeader';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import StudentPage from './components/StudentPage';
 import LoginFields from './components/LoginFields';
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -19,6 +19,7 @@ function App() {
   const webMed = useMediaQuery('(min-width:900px)')
 
   const theme = isDarkMode ? darkPalette : lightPalette;
+
 
   return (
     <BrowserRouter initialEntries={["/home"]}>
@@ -46,7 +47,7 @@ function App() {
               <LoginFields loggedIn={loggedIn} setLoggedIn={setLoggedIn} setSelectedStudent={setSelectedStudent}/>
             </Stack>}
             {loggedIn && selectedStudent &&
-              <StudentPage selectedStudent={selectedStudent} setSelectedStudent={setSelectedStudent} setLoggedIn={setLoggedIn}/>
+              <StudentPage selectedStudent={selectedStudent} setSelectedStudent={setSelectedStudent} setLoggedIn={setLoggedIn} isDarkMode={isDarkMode}/>
             }
           </Stack>
           <Stack direction={'row'} alignItems={'flex-end'} width={'97vw'}>

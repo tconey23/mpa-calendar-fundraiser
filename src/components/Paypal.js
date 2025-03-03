@@ -26,7 +26,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
       const [isDev] = useState(false);
-      const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
+      const [endpoint, setEndpoint] = useState(null);
       
       useEffect(() => {
         setEndpoint(isDev ? "http://localhost:3002/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
@@ -45,6 +45,28 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
       useEffect(() => {
         // console.log(transID)
       }, [transID])
+
+      const queryServer = async () => {
+        try {
+            const res = await fetch(`${endpoint}/test`)
+            const data = await res.json()
+            console.log(data)
+            return data
+        } catch (error) {
+            console.error(error);
+            
+        }
+      }
+
+      useEffect(() => {
+        if(endpoint) {
+          queryServer()
+        }
+      }, [endpoint])
+
+      useEffect(() => {
+        setEndpoint(isDev ? "http://localhost:3002/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
+      }, [isDev]);
       
 
       return (

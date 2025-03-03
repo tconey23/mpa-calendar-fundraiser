@@ -129,6 +129,29 @@ const addStudentDate = async (data) => {
 
 }
 
+const fetchStudentDetail = async (data) => {
+    console.log(data)
+    try {
+        const dbRef = ref(database, `Students`);
+        const snapshot = await get(dbRef);
 
+        if (snapshot.exists()) {
+            // console.log(snapshot.val().findIndex((st) => `${st.FIRST.toLowerCase()} ${st.LAST.toLowerCase()}` === data.student.toLowerCase()))
+            let foundStudent = snapshot.val().findIndex((st) => `${st.FIRST.toLowerCase()} ${st.LAST.toLowerCase()}` === data)
+            
+            if(foundStudent !== -1){
+                let dates = snapshot.val()[foundStudent].dates
+                return dates && Object.values(dates)
+            }
+            
+        } else {
+            console.log('No data available');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error; 
+    }
+}
 
-export { studentData, studentDates, addStudentDate, studentCredentials, debugUsers };
+export { studentData, studentDates, addStudentDate, studentCredentials, debugUsers, fetchStudentDetail};

@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Box, Button, FormControl, OutlinedInput, Stack, TextField, Tooltip, Typography, Alert, Checkbox } from '@mui/material';
+import { Box, Button, Stack, Typography, Alert, Accordion, AccordionSummary, AccordionDetails} from '@mui/material';
 import Calendar from './Calendar';
-import { studentDates, addStudentDate } from '../business/apiCalls';
-import dayjs from 'dayjs';
-import Paypal from './Paypal';
-import {Avatar} from '@mui/material';
+import { studentDates, fetchStudentDetail } from '../business/apiCalls';
 import useMediaQuery from '@mui/material/useMediaQuery'
 import DonationForm from './DonationForm';
 import DirectDonationForm from './DirectDonationForm';
 import SuccessAlert from './SuccessAlert';
+import {useTheme} from '@mui/material';
 
-const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => { 
+const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn, isDarkMode }) => { 
   const [disabledDates, setDisabledDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
@@ -18,12 +16,17 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   const [donationType, setDonationType] = useState('date')
   const [success, setSuccess] = useState(false)
   const [displayCalendar, setDisplayCalendar] = useState(true)
+  const [reservedDates, setReservedDates] = useState([])
+  const [totalRaised, setTotalRaised] = useState('0')
+  const [isHover, setIsHover] = useState(null)
+
+  const theme = useTheme()
   
 
   const webMed = useMediaQuery('(min-width:900px)')
 
-
   const getStudentDates = async () => {
+    console.clear()
     const dates = await studentDates(selectedStudent);
     if (dates?.dates) {
       setDisabledDates(Object.entries(dates.dates));
@@ -31,6 +34,30 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
       setDisabledDates([]);
     }
   };
+
+  const getReserved = async () => {
+    try {
+        const res = await fetchStudentDetail(selectedStudent)
+        console.log(res)
+
+        res.forEach((dt) => {
+          setReservedDates(prev => [
+            ...prev,
+            dt
+          ])
+        })
+
+        const total = res.reduce((acc, dt) => {
+          return acc + parseFloat(dt.dollarAmount.replace('$', ''));
+      }, 0);
+      
+      setTotalRaised(`$${parseInt(total).toFixed(2)}`) 
+
+        setReservedDates(res)
+    } catch (error) {
+        console.log(error);
+    }
+  }
 
   useEffect(() => {
     if(!webMed && donationType === 'direct'){
@@ -46,6 +73,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   useEffect(() => {
     getStudentDates();
     setSelectedDate(null);
+    getReserved()
   }, [selectedStudent, refreshTrigger]);
 
 
@@ -86,7 +114,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   return (
     <Stack
       direction='column'
-      justifyContent={webMed ? 'center' : 'flex_start'}
+      justifyContent={webMed ? 'flex_start' : 'flex_start'}
       alignItems="center"
       sx={{
         height: '75vh',
@@ -94,7 +122,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         borderWidth: 1,
         borderStyle: 'solid',
         borderRadius: 5,
-        overflowY: webMed ? 'hidden' : 'scroll',
+        overflowY: webMed ? 'auto' : 'scroll',
         overflowX : 'hidden'
       }}
       borderColor="primary.contrastText"
@@ -108,13 +136,84 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         </Stack>
       </Stack>
 
-      <Stack direction={'row'}>
+      <Stack direction={'column'} width={'80%'} alignItems={'center'}>
         <Box sx={{display: 'flex'}}>
-            {/* <Avatar sx={{display: webMed ? 'block' : 'none'}}>{selectedStudent[0]}</Avatar> */}
             <Typography sx={{textDecoration: 'underline', marginBottom: 2, fontSize: webMed ? 40 : 20, marginLeft: 1}} color="text.secondary" variant="h3">
                 {upperCaseName(selectedStudent)}
             </Typography>
         </Box>
+        <Stack width={'100%'} margin={2} position={'relative'}>
+          <Accordion sx={{width: "100%", background: theme.palette.primary.main, maxHeight: '250px'}}>
+              <AccordionSummary
+              expandIcon={null}
+              aria-controls="panel1-content"
+              id="panel1-header"
+              fontSize={'clamp(10px, 2vw, 20px)'}
+            >
+              <Typography fontSize={'100%'}>
+                {totalRaised && `Total Raised: ${totalRaised}`}
+              </Typography>
+            </AccordionSummary>
+            <Stack fontSize={'clamp(10px, 2vw, 20px)'} direction={'row'} justifyContent={'space-around'} width={'90%'}>
+              <Box width={'33%'}>
+                <Typography fontSize={'100%'} justifySelf={'center'} width={'100%'} textAlign={'center'}>From:</Typography>
+              </Box>
+              <Box width={'33%'}>
+                <Typography fontSize={'100%'} justifySelf={'center'} width={'100%'} textAlign={'center'}>Message:</Typography> 
+              </Box>
+              <Box width={'33%'}>
+                <Typography fontSize={'100%'} justifySelf={'center'} width={'100%'} textAlign={'center'}>Amount:</Typography>
+              </Box>
+            </Stack>
+            <Stack overflow={'auto'} height={'100px'}>
+            {reservedDates && reservedDates.map((dt, i) => { 
+              return (
+                <AccordionDetails onMouseOver={() => setIsHover(i)} onMouseOut={() => setIsHover(null)} sx={{marginBottom: '0px', width: '100%'}}>
+                <Stack borderRadius={20} width={'100%'} fontSize={'clamp(5px, 2vw, 20px)'} direction={'row'} justifyContent={'space-around'} border={isHover !== i ? '1px solid black' : 'none'} 
+                sx={{
+                  background: isHover === i ? theme.palette.primary.avatar : theme.palette.primary.main,
+                  boxShadow: isHover === i ? '1px 3px 8px 1px #00000070' : 'none'
+                }}
+                >
+                <Box sx={{ display: "flex", flexWrap: "wrap"}} width={'33%'} borderRight={'1px solid grey'} margin={1}>
+                  <Typography sx={{
+                    width: '95%',
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 2, // Limits to 2 lines
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: 'center'
+                  }} fontSize={'100%'} justifySelf={'center'} color={theme.palette.text.avatar}>{dt.name}</Typography>
+                </Box>
+                <Box sx={{ display: "flex", flexWrap: "wrap"}} width={'33%'} borderRight={'1px solid grey'} margin={1}>
+                  <Typography sx={{
+                    width: '95%',
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 2, // Limits to 2 lines
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: 'center'
+                  }}  fontSize={'100%'} justifySelf={'center'} color={theme.palette.text.avatar}>{`"${dt.message}"`}</Typography>
+                </Box>
+                <Box sx={{ display: "flex", flexWrap: "wrap"}} width={'33%'} margin={1}>
+                  <Typography sx={{
+                    width: '90%',
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 2, // Limits to 2 lines
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    textAlign: 'center'
+                  }}  fontSize={'80%'} justifySelf={'center'} color={theme.palette.text.avatar}>{dt.dollarAmount}</Typography>
+                </Box>
+                </Stack>
+              </AccordionDetails>
+            )})}
+            </Stack>
+          </Accordion>
+        </Stack>
       </Stack>
 
       <Stack
@@ -126,7 +225,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         padding={2}
       >
         <Stack sx={{minHeight: '50px'}}>
-            {isReserving && <Alert severity='success'>Your date has been reserved!</Alert>}
+            {isReserving && <Alert severity='success'>Your date has been reserved!</Alert>} 
         </Stack>
         
         {displayCalendar && 

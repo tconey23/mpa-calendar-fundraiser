@@ -48,30 +48,35 @@ const Calendar = ({ disabledDates, setSelectedDate }) => {
     return (
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Suspense fallback={<ProgressCircle />}>
-                    <DateCalendar
-                        views={['day']}
-                        value={dayjs('2025-03-01')}
-                        onChange={(newValue) => handleDateSelect(newValue)}
-                        slotProps={{
-                            day: (dayProps) => {
-                                const { isMonthSwitchingAnimating, focusedDay, currentMonth, slideDirection, disablePast, disableFuture, maxDate, minDate, gridLabelId, slotProps, onMonthSwitchingAnimationEnd,  ...restDayProps } = dayProps;
-                                const isSpecialDate = disabledDates?.some(
-                                    (disabledDate) => disabledDate[0] === formatDate(dayProps.day)
-                                );
-                                const title = getCustomTitle(dayProps.day);
-                                
-                                return {
-                                    children: isSpecialDate ? (
-                                        <StyledSpecialDay title={title}>
-                                            {dayProps.day.format('D')}
-                                        </StyledSpecialDay>
-                                    ) : (
-                                        dayProps.children
-                                    ),
-                                };
-                            },
-                        }}
-                    />
+                    <Stack>
+                        <DateCalendar
+                            width={'100%'}
+                            justifyContent={'center'}
+                            alignItems={'center'}
+                            views={['day']}
+                            value={dayjs('2025-03-01')}
+                            onChange={(newValue) => handleDateSelect(newValue)} 
+                            slotProps={{
+                                day: (dayProps) => {
+                                    const { isMonthSwitchingAnimating, focusedDay, currentMonth, slideDirection, disablePast, disableFuture, maxDate, minDate, gridLabelId, slotProps, onMonthSwitchingAnimationEnd,  ...restDayProps } = dayProps;
+                                    const isSpecialDate = disabledDates?.some(
+                                        (disabledDate) => disabledDate[0] === formatDate(dayProps.day)
+                                    );
+                                    const title = getCustomTitle(dayProps.day);
+                                    
+                                    return {
+                                        children: isSpecialDate ? (
+                                            <StyledSpecialDay title={title}>
+                                                {dayProps.day.format('D')}
+                                            </StyledSpecialDay>
+                                        ) : (
+                                            dayProps.children
+                                        ),
+                                    };
+                                },
+                            }}
+                            />
+                    </Stack>
                 </Suspense>
             </LocalizationProvider>
     );
