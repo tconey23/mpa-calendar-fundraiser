@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom"; 
-import { Stack, CssBaseline, Typography } from '@mui/material';
+import { Stack, CssBaseline, Typography, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightPalette, darkPalette } from './business/palette' 
 import AppHeader from './components/AppHeader';
@@ -14,6 +14,7 @@ function App() {
   const [selectedStudent, setSelectedStudent] = useState(null)
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [loggedIn, setLoggedIn] = useState(false)
+  const [version] = useState('4.1')
 
   const webMed = useMediaQuery('(min-width:900px)')
 
@@ -47,6 +48,9 @@ function App() {
             {loggedIn && selectedStudent &&
               <StudentPage selectedStudent={selectedStudent} setSelectedStudent={setSelectedStudent} setLoggedIn={setLoggedIn}/>
             }
+          </Stack>
+          <Stack direction={'row'} alignItems={'flex-end'} width={'97vw'}>
+            <Typography fontSize={8}>ver: {version}</Typography>
           </Stack>
         </Stack>
       </ThemeProvider>

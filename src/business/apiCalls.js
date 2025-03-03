@@ -98,25 +98,28 @@ const studentDates = async (student) => {
 
 const addStudentDate = async (data) => {
 
-    // console.log(data.student.toLowerCase())
+    // console.clear()
 
     try {
         const dbRef = ref(database, `Students`);
         const snapshot = await get(dbRef);
         if (snapshot.exists()) {
-            // console.log(snapshot.val().findIndex((st) => `${st.FIRST.toLowerCase()} ${st.LAST.toLowerCase()}` === data.student))
+            // const dbSt = snapshot.val()[23]
+            // console.log(`${dbSt.FIRST.toLowerCase()} ${dbSt.LAST.toLowerCase()}`)
+            // console.log(data.student.toLowerCase())
 
-            let foundStudent = snapshot.val().findIndex((st) => `${st.FIRST.toLowerCase()} ${st.LAST.toLowerCase()}` === data.student)
+            // console.log(snapshot.val().findIndex((st) => `${st.FIRST.toLowerCase()} ${st.LAST.toLowerCase()}` === data.student.toLowerCase()))
+            let foundStudent = snapshot.val().findIndex((st) => `${st.FIRST.toLowerCase()} ${st.LAST.toLowerCase()}` === data.student.toLowerCase())
             
             if(foundStudent !== -1){
                 const studentRef = ref(database, `Students/${foundStudent}/dates`)
-                // console.log(studentRef)
                 await update(studentRef, data.date)
+                // console.log(snapshot.val()[foundStudent].dates)
                 return 'success'
             }
             
         } else {
-            // console.log('No data available');
+            console.log('No data available');
             return null;
         }
     } catch (error) {
@@ -125,5 +128,7 @@ const addStudentDate = async (data) => {
     }
 
 }
+
+
 
 export { studentData, studentDates, addStudentDate, studentCredentials, debugUsers };

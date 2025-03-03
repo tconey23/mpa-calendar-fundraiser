@@ -33,6 +33,11 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
       }
     }, [selectedDate]);
 
+    useEffect(() => {
+      console.log(parseFloat(donateAmount).toFixed(2))
+      console.log(`$${parseFloat(donateAmount).toFixed(2)}`)
+    }, [donateAmount])
+
 
     const nameRequired = () => {
 
@@ -56,7 +61,7 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
     
         if(!toggleMessage){
           return true
-        }
+        } 
     
         return false
       }
@@ -68,11 +73,13 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
               reserved: true,
               message,
               name,
-              dollarAmount: donateAmount
+              dollarAmount: `$${parseFloat(donateAmount).toFixed(2)}`
             },
           },
           student: selectedStudent,
         };
+
+        console.log(reservation)
     
         await addStudentDate(reservation);
         resetData();
@@ -145,7 +152,7 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
                   </Box>
                   <Box padding={2}>
                     <TextField
-                      value={`$${donateAmount}.00`}
+                      value={`$${parseFloat(donateAmount).toFixed(2)}`}
                       disabled
                       placeholder="Donation Amount"
                       maxRows={4}
