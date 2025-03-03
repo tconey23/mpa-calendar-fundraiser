@@ -93,11 +93,11 @@ async function onApproveCallback(data, actions) {
     } else {
       // (3) Successful transaction -> Show confirmation or thank you message
       // Or go to another URL:  actions.redirect('thank_you.html');
-      console.log(
-        "Capture result",
-        orderData,
-        JSON.stringify(orderData, null, 2),
-      );
+      // console.log(
+      //   "Capture result",
+      //   orderData,
+      //   JSON.stringify(orderData, null, 2),
+      // );
       return `Transaction ${transaction.status}: ${transaction.id}. See console for all available details`;
     }
   } catch (error) {

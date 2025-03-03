@@ -18,7 +18,7 @@ const HomePage = ({ students, setSelectedStudent, selectedStudent }) => {
   }, [selectedStudent]);
 
   useEffect(() => {
-    console.log();
+    // console.log();
   }, [students]);
 
   return (

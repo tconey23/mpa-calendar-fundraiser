@@ -43,7 +43,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
       }, [orderId])
 
       useEffect(() => {
-        console.log(transID)
+        // console.log(transID)
       }, [transID])
       
 
@@ -79,7 +79,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
                   });
     
                   const orderData = await response.json();
-                  console.log(orderData)
+                  // console.log(orderData)
                   if (orderData.id) {
                     return orderData.id;
                   } else {
@@ -130,7 +130,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
                     const transaction =
                       orderData.purchase_units[0].payments.captures[0];
                     setTransactionStatus(transaction.status)
-                    console.log(transaction)
+                    // console.log(transaction)
                   }
                 } catch (error) {
                   console.error(error);

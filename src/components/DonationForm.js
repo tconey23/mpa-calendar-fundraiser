@@ -24,7 +24,7 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
 
     useEffect(() => {
       if (selectedDate) {
-        console.log(selectedDate);
+        // console.log(selectedDate);
         setTransactionStatus(null);
         
         let dateNum = formatDate(new Date(selectedDate.date.replace(/-/g, '/')));

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Stack, Box, Button, Typography } from '@mui/material';
-import { studentCredentials } from '../business/apiCalls';
+import { studentCredentials, debugUsers } from '../business/apiCalls';
 import TextField from '@mui/material/TextField';
 import MediaDisplay from './MediaDisplay';
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -16,6 +16,7 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
     const [username, setUserName] = useState(null)
     const [errors, setErrors] = useState([])
     const [toggleError, setToggleError] = useState(null)
+    const [debugLogin] = useState(false)
     
 
     const checkString = async (str) => /[^a-zA-Z0-9]/.test(str);
@@ -54,6 +55,10 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
         }        
     }
 
+    useEffect(() => {
+        debugLogin && debugUsers()
+    }, [debugLogin])
+
 
 
     useEffect(() => {
@@ -75,11 +80,9 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
         }
 
         if(password && username){
-            console.log(password, username)
+            // console.log(password, username)
             checkCredentials()
         }
-
-        console.log(webSml)
 
     }, [childFirst, childLast, password, username, webSml])
     

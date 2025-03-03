@@ -33,7 +33,7 @@ const PaypalDonate = ({ donateAmount, setTransactionStatus }) => {
     });
     const captureData = await response.json();
     if (captureData.status === "COMPLETED") {
-      console.log("Donation successful!", captureData);
+      // console.log("Donation successful!", captureData);
     }
   }}
 />
