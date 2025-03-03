@@ -7,6 +7,7 @@ import Paypal from './Paypal';
 import {Avatar} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery'
 import SuccessAlert from './SuccessAlert';
+import PaypalDonate from './PaypalDonate';
 
 const formatToUSD = (num) => new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -86,9 +87,10 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
       };
     
       const handleBlur = () => {
-        let checkCurrency = donateAmount.includes('$')
+        
+        let checkCurrency = donateAmount?.includes('$')
         console.log(checkCurrency)
-        if (donateAmount !== "" && !checkCurrency) {
+        if (donateAmount && donateAmount !== "" && !checkCurrency) {
           setDonateAmount(formatToUSD(parseFloat(donateAmount)));
         }
       };
@@ -102,8 +104,6 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
         } else {
           val = 0
         }
-
-        console.log(typeof val.toString(), val.toString())
 
         setRawDonateAmount(val.toString())
       }, [donateAmount])

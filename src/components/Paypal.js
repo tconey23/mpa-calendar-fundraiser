@@ -48,6 +48,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
               style={{
                 shape: "rect",
                 layout: "vertical",
+                label: 'donate'
               }}
               createOrder={async () => {
                 try {

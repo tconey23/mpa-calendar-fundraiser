@@ -16,7 +16,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [isReserving, setIsReserving] = useState(false)
   const [donationType, setDonationType] = useState('date')
-  const [success, setSuccess] = useState(true)
+  const [success, setSuccess] = useState(false)
   const [displayCalendar, setDisplayCalendar] = useState(true)
   
 
@@ -48,6 +48,12 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
     setSelectedDate(null);
   }, [selectedStudent, refreshTrigger]);
 
+
+  useEffect(() => {
+    if(selectedDate && donationType === 'direct'){
+      setDonationType('date')
+    }
+  }, [selectedDate])
  
 
   useEffect(() => {
@@ -98,7 +104,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
 
       <Stack direction={webMed ? 'row' : 'column'} width={'100%'} justifyContent={'flex-start'}>
         <Stack justifySelf={webMed ? 'center' : 'flex_start'} paddingBottom={1}>
-          <Button sx={{scale: webMed ? 1 : 0.5}} variant="contained" onClick={() => logOut()}>Back</Button>
+          <Button sx={{scale: webMed ? 1 : 0.5, margin: 2}} variant="contained" onClick={() => logOut()}>Back</Button>
         </Stack>
       </Stack>
 
