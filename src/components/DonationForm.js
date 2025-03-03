@@ -20,13 +20,15 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
     const webMed = useMediaQuery('(min-width:900px)')
 
     useEffect(() => {
-        if(selectedDate){
-          console.log(selectedDate)
-            setTransactionStatus(null)
-          let dateNum = formatDate(new Date(selectedDate.date))
-          dateNum[0] == 0 ? setDonateAmount(`${dateNum[1]}`) : setDonateAmount(`${dateNum}`)
-        }
-      }, [selectedDate])
+      if (selectedDate) {
+        console.log(selectedDate);
+        setTransactionStatus(null);
+        
+        let dateNum = formatDate(new Date(selectedDate.date.replace(/-/g, '/')));
+    
+        setDonateAmount(dateNum);
+      }
+    }, [selectedDate]);
 
 
     const nameRequired = () => {
