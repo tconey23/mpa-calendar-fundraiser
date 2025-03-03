@@ -13,7 +13,7 @@ function Message({ content }) {
 const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
   //AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo
 
-    const [clientID] = useState('AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo')
+    const [clientID] = useState('test')
 
     const initialOptions = {
         "client-id": clientID, 
@@ -26,7 +26,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
       const [transID, setTransID] = useState(12345)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
-      const [isDev, setIsDev] = useState(false);
+      const [isDev] = useState(true);
       const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       
       useEffect(() => {
