@@ -26,7 +26,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
       const [transID, setTransID] = useState(12345)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
-      const [isDev] = useState(true);
+      const [isDev] = useState(false);
       const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       
       useEffect(() => {
