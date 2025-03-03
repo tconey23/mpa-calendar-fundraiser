@@ -7,7 +7,9 @@ import Paypal from './Paypal';
 import {Avatar} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery'
 import SuccessAlert from './SuccessAlert';
-import PaypalDonate from './PaypalDonate';
+import { sha256 } from "js-sha256";
+
+const hashDate = (date) => dayjs(date).format('MMDDYYYYhhhhmmssms')
 
 const formatToUSD = (num) => new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -23,6 +25,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
     const [donateAmount, setDonateAmount] = useState(null)
     const [rawDonateAmount, setRawDonateAmount] = useState(null)
     const [isReady, setIsReady] = useState(false)
+    const [orderId, setOrderId] = useState(null)
     
     const webMed = useMediaQuery('(min-width:900px)')
 
@@ -89,7 +92,6 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
       const handleBlur = () => {
         
         let checkCurrency = donateAmount?.includes('$')
-        console.log(checkCurrency)
         if (donateAmount && donateAmount !== "" && !checkCurrency) {
           setDonateAmount(formatToUSD(parseFloat(donateAmount)));
         }
@@ -108,6 +110,20 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
         setRawDonateAmount(val.toString())
       }, [donateAmount])
 
+      useEffect(() => {
+
+        let student = selectedStudent?.replace(' ', '').toLowerCase()
+
+        let donor
+        name ? donor = name.replace(' ', '_') : donor = 'Anon'
+
+        let idNum = hashDate(Date.now())
+        let orderId = `${donor}:${student}:${idNum}`
+
+
+        console.log(orderId)
+      }, [selectedStudent, name, message, transactionStatus])
+
       const cancelDirectDonate = () => {
         setDonationType('date')
         setRawDonateAmount(null)
@@ -122,7 +138,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
 
                 <FormControl sx={{ width: '100%' }}>
                   <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
-                    {!transactionStatus === 'COMPLETED' &&
+                    {transactionStatus !== 'COMPLETED' &&
                       <>
                       <Checkbox onChange={() => setToggleName(prev => !prev)}/>
                     {toggleName ? <TextField
@@ -137,7 +153,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
                   }
                   </Box>
                   <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
-                    {!transactionStatus === 'COMPLETED' &&
+                    {transactionStatus !== 'COMPLETED' &&
                       <>
                       <Checkbox onChange={() => setToggleMessage(prev => !prev)}/> 
                     {toggleMessage ? 

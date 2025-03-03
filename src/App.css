@@ -20,11 +20,13 @@
 }
 
 body{
-  overflow: hidden !important;
-  justify-content: flex-start;
+  overflow: auto !important;
+  display: flex !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  align-items: flex-start;
+  justify-content: center;
 }
-
-
 
 .App {
   text-align: center;
