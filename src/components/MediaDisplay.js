@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Box, ImageList, ImageListItem, Stack, Tooltip, Typography } from '@mui/material';
-import PlaygroundImg from '../assets/playground.png'
+import PlaygroundImg from '../assets/playground_img.png'
 import BienLogo from '../assets/bienenstock-logo.png'
 
 const MediaDisplay = () => {
