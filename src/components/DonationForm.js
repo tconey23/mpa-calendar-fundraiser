@@ -30,10 +30,6 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
       }
     }, [selectedDate]);
 
-      useEffect(() => {
-        console.log(donateAmount)
-      }, [donateAmount])
-
 
     const nameRequired = () => {
 
