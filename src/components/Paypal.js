@@ -10,7 +10,7 @@ function Message({ content }) {
     return <p>{content}</p>;
   }
 
-const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
+const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) => {
   //AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo
 
     const [clientID] = useState('AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo')
@@ -23,7 +23,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
       };
     
       const [message, setMessage] = useState("");
-      const [transID, setTransID] = useState(12345)
+      const [transID, setTransID] = useState(null)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
       const [isDev] = useState(false);
@@ -34,16 +34,22 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
       }, [isDev]);
 
       useEffect(() =>{
-        if(selectedStudent) {
-          let id = `${selectedStudent}${formatDate(Date.now())}`
-          setTransID(hashString(id))
+        if(orderId) {
+          console.log(orderId)
+          let uuid = hashString(orderId)
+          setTransID(`${orderId}:${uuid.slice(0, 10)}`)
         }
-      }, [selectedStudent])
+      }, [orderId])
+
+      useEffect(() => {
+        console.log(transID)
+      }, [transID])
       
 
       return (
         <div className="App">
           <PayPalScriptProvider options={initialOptions} key={clientID}>
+            {transID && 
             <PayPalButtons
               style={{
                 shape: "rect",
@@ -130,7 +136,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
                   setTransactionStatus(error)
                 }
               }}
-            />
+            />}
           </PayPalScriptProvider>
           <Message content={message} />
         </div>

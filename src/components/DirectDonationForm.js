@@ -115,13 +115,10 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
         let student = selectedStudent?.replace(' ', '').toLowerCase()
 
         let donor
-        name ? donor = name.replace(' ', '_') : donor = 'Anon'
+        name ? donor = name.replace(' ', '').toLowerCase() : donor = 'Anon'
 
         let idNum = hashDate(Date.now())
-        let orderId = `${donor}:${student}:${idNum}`
-
-
-        console.log(orderId)
+        setOrderId(`${donor}:${student}:${idNum}`)
       }, [selectedStudent, name, message, transactionStatus])
 
       const cancelDirectDonate = () => {
@@ -190,7 +187,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
                     }
                   </Box>
                 {!transactionStatus && nameRequired() && messageRequired() && rawDonateAmount && isReady &&
-                    <Paypal selectedStudent={selectedStudent} setTransactionStatus={setTransactionStatus} donateAmount={rawDonateAmount}/>
+                    <Paypal selectedStudent={selectedStudent} setTransactionStatus={setTransactionStatus} donateAmount={rawDonateAmount} orderId={orderId}/>
                 }
                 {transactionStatus === 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='success'>
                     <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
