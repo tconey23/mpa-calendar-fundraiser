@@ -48,6 +48,12 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
     setSelectedDate(null);
   }, [selectedStudent, refreshTrigger]);
 
+
+  useEffect(() => {
+    if(selectedDate && donationType === 'direct'){
+      setDonationType('date')
+    }
+  }, [selectedDate])
  
 
   useEffect(() => {
@@ -98,7 +104,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
 
       <Stack direction={webMed ? 'row' : 'column'} width={'100%'} justifyContent={'flex-start'}>
         <Stack justifySelf={webMed ? 'center' : 'flex_start'} paddingBottom={1}>
-          <Button sx={{scale: webMed ? 1 : 0.5}} variant="contained" onClick={() => logOut()}>Back</Button>
+          <Button sx={{scale: webMed ? 1 : 0.5, margin: 2}} variant="contained" onClick={() => logOut()}>Back</Button>
         </Stack>
       </Stack>
 
@@ -116,6 +122,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
         justifyContent="flex-start"
         alignItems="center"
         sx={{ height: webMed ? '98%' : '200%', boxShadow: 'inset 0px 0px 16px 0px #00000042'}}
+        width={'100%'}
         padding={2}
       >
         <Stack sx={{minHeight: '50px'}}>
@@ -162,12 +169,12 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn }) => {
           }
 
           {!success && !selectedDate && donationType === 'direct' && 
-            <DirectDonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={selectedStudent} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
+            <DirectDonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={upperCaseName(selectedStudent)} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
           }
 
 
           {!success && selectedDate && donationType === 'date' &&(
-           <DonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={selectedStudent} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
+           <DonationForm setSuccess={setSuccess} setSelectedDate={setSelectedDate} selectedDate={selectedDate} selectedStudent={upperCaseName(selectedStudent)} setRefreshTrigger={setRefreshTrigger} setDonationType={setDonationType}/>
           )}
 
 

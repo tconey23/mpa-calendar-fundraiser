@@ -7,6 +7,7 @@ import Paypal from './Paypal';
 import {Avatar} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery'
 import SuccessAlert from './SuccessAlert';
+import PaypalDonate from './PaypalDonate';
 
 const formatToUSD = (num) => new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -86,9 +87,10 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
       };
     
       const handleBlur = () => {
-        let checkCurrency = donateAmount.includes('$')
+        
+        let checkCurrency = donateAmount?.includes('$')
         console.log(checkCurrency)
-        if (donateAmount !== "" && !checkCurrency) {
+        if (donateAmount && donateAmount !== "" && !checkCurrency) {
           setDonateAmount(formatToUSD(parseFloat(donateAmount)));
         }
       };
@@ -102,8 +104,6 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
         } else {
           val = 0
         }
-
-        console.log(typeof val.toString(), val.toString())
 
         setRawDonateAmount(val.toString())
       }, [donateAmount])
@@ -122,32 +122,40 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
 
                 <FormControl sx={{ width: '100%' }}>
                   <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
-                    <Checkbox onChange={() => setToggleName(prev => !prev)}/>
+                    {!transactionStatus === 'COMPLETED' &&
+                      <>
+                      <Checkbox onChange={() => setToggleName(prev => !prev)}/>
                     {toggleName ? <TextField
                       label='Your name'
                       required
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your name"
-                    /> :
-                    <Typography>Include Name?</Typography>
+                      /> :
+                      <Typography>Include Name?</Typography>
+                    }
+                    </>
                   }
                   </Box>
                   <Box display={'flex'} sx={{flexDirection: 'row', alignItems: 'center'}} padding={2}>
-                    <Checkbox onChange={() => setToggleMessage(prev => !prev)}/> 
+                    {!transactionStatus === 'COMPLETED' &&
+                      <>
+                      <Checkbox onChange={() => setToggleMessage(prev => !prev)}/> 
                     {toggleMessage ? 
                     
                     <TextField
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      sx={{ width: '100%' }}
-                      required
-                      fullWidth
-                      multiline
-                      label="Your Message"
-                      maxRows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    sx={{ width: '100%' }}
+                    required
+                    fullWidth
+                    multiline
+                    label="Your Message"
+                    maxRows={4}
                     /> : 
                     <Typography>Include Message?</Typography>
                   } 
+                  </>
+                  }
                   </Box>
                   <Box padding={2}>
                     <TextField
@@ -166,11 +174,10 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
                     }
                   </Box>
                 {!transactionStatus && nameRequired() && messageRequired() && rawDonateAmount && isReady &&
-                    <Paypal setTransactionStatus={setTransactionStatus} donateAmount={rawDonateAmount}/>
+                    <Paypal selectedStudent={selectedStudent} setTransactionStatus={setTransactionStatus} donateAmount={rawDonateAmount}/>
                 }
                 {transactionStatus === 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='success'>
                     <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>
-                    <Typography>Please proceed with your reservation</Typography>
                 </Alert>
                 }
                 {/* {transactionStatus !== 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='error'>
@@ -186,7 +193,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
                     
                     variant="contained"
                   >
-                    Complete
+                    Done
                   </Button>}
                 </Box>
     </Stack>

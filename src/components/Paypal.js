@@ -1,12 +1,20 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useState, useEffect } from "react";
+import dayjs from 'dayjs'
 import { Stack } from "@mui/material";
+import { hashString } from "../business/hash";
+
+const formatDate = (date) => dayjs(date).format('MMDDYYYYhhhhmmssms')
 
 function Message({ content }) {
     return <p>{content}</p>;
   }
 
-const Paypal = ({donateAmount, setTransactionStatus}) => {
+const Paypal = ({donateAmount, setTransactionStatus, selectedStudent}) => {
+  //AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo
+
+    const [clientID] = useState('test')
+
     const initialOptions = {
         "client-id": "AfaEZx7-0WTz8f6bMUU2_JL9G6qernoKCZkyri7JK6ZWvPCqMxVL5IwPPAegMM0N8aSc5G0Mc4KUcszo", 
         "enable-funding": "card",
@@ -15,20 +23,22 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
       };
     
       const [message, setMessage] = useState("");
-      const [YOUR_PRODUCT_ID] = useState(12345)
+      const [transID, setTransID] = useState(12345)
       const [YOUR_PRODUCT_QUANTITY] = useState(1)
 
-      const [isDev, setIsDev] = useState(true);
+      const [isDev, setIsDev] = useState(false);
       const [endpoint, setEndpoint] = useState("https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       
       useEffect(() => {
-        setEndpoint(isDev ? "http://localhost:8888/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
+        setEndpoint(isDev ? "http://localhost:3002/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       }, [isDev]);
 
-      useEffect(() => {
-        console.clear()
-        console.log(typeof donateAmount, donateAmount)
-      }, [donateAmount])
+      useEffect(() =>{
+        if(selectedStudent) {
+          let id = `${selectedStudent}${formatDate(Date.now())}`
+          setTransID(hashString(id))
+        }
+      }, [selectedStudent])
       
 
       return (
@@ -38,6 +48,7 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
               style={{
                 shape: "rect",
                 layout: "vertical",
+                label: 'donate'
               }}
               createOrder={async () => {
                 try {
@@ -49,7 +60,7 @@ const Paypal = ({donateAmount, setTransactionStatus}) => {
                     body: JSON.stringify({
                         cart: [
                             {
-                              id: YOUR_PRODUCT_ID,
+                              id: transID,
                               quantity: YOUR_PRODUCT_QUANTITY,
                               unit_amount: {
                                 currency_code: "USD",
