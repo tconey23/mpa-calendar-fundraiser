@@ -119,7 +119,7 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
 
         let idNum = hashDate(Date.now())
         setOrderId(`${donor}:${student}:${idNum}`)
-      }, [selectedStudent, name, message, transactionStatus])
+      }, [selectedStudent, name, message])
 
       const cancelDirectDonate = () => {
         setDonationType('date')

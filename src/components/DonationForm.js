@@ -7,6 +7,8 @@ import Paypal from './Paypal';
 import {Avatar} from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery'
 
+const hashDate = (date) => dayjs(date).format('MMDDYYYYhhhhmmssms')
+
 const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSelectedDate, setSuccess}) => {
     const [transactionStatus, setTransactionStatus] = useState(null)
     const [toggleName, setToggleName] = useState(false)
@@ -14,6 +16,7 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
     const [donateAmount, setDonateAmount] = useState('$0.00')
+    const [orderId, setOrderId] = useState(null)
 
     const formatDate = (date) => dayjs(date).format('DD')
 
@@ -80,6 +83,17 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
         setSuccess(true)
       };
 
+            useEffect(() => {
+      
+              let student = selectedStudent?.replace(' ', '').toLowerCase()
+      
+              let donor
+              name ? donor = name.replace(' ', '').toLowerCase() : donor = 'Anon'
+      
+              let idNum = hashDate(Date.now())
+              setOrderId(`${donor}:${student}:${idNum}`)
+            }, [selectedStudent, name, message])
+
 
   return (
     <Stack justifyContent={'center'} alignItems={'center'}>
@@ -138,7 +152,7 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
                     />
                   </Box>
                 {!transactionStatus && nameRequired() && messageRequired() &&
-                    <Paypal setTransactionStatus={setTransactionStatus} donateAmount={donateAmount}/>
+                    <Paypal setTransactionStatus={setTransactionStatus} donateAmount={donateAmount} orderId={orderId}/>
                 }
                 {transactionStatus === 'COMPLETED' && nameRequired() && messageRequired() && <Alert severity='success'>
                     <Typography>{`Thank you for supporting ${selectedStudent} and Montessori Peaks Academy!`}</Typography>

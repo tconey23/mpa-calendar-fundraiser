@@ -35,9 +35,10 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
 
       useEffect(() =>{
         if(orderId) {
-          console.log(orderId)
           let uuid = hashString(orderId)
           setTransID(`${orderId}:${uuid.slice(0, 10)}`)
+        } else {
+          setTransID(formatDate(Date.now()))
         }
       }, [orderId])
 

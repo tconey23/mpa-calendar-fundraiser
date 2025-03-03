@@ -45,6 +45,8 @@ const studentCredentials = async (password, username) => {
     }
 };
 
+studentCredentials()
+
 const studentDates = async (student) => {
     console.log(student)
     try {
