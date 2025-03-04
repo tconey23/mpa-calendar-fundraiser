@@ -166,8 +166,14 @@ const adminVal = () => {
 }
 
 const getBalance = async () => {
+    const isDev = false
+
+    const endpoint = isDev 
+    ? 'http://localhost:3002/api/balance'
+    : 'https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api/balance'
+
     try {
-        const res = await fetch('http://localhost:3002/api/balance')
+        const res = await fetch(endpoint)
         const data = await res.json()
 
         return data
