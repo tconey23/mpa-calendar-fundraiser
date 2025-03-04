@@ -60,19 +60,23 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
 
       useEffect(() => {
         if(endpoint) {
-          queryServer()
+          // queryServer()
         }
       }, [endpoint])
 
       useEffect(() => {
         setEndpoint(isDev ? "http://localhost:3002/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       }, [isDev]);
+
+      useEffect(() => {
+
+      }, [])
       
 
       return (
         <div className="App">
           <PayPalScriptProvider options={initialOptions} key={clientID}>
-            {transID && 
+            {transID && clientID &&
             <PayPalButtons
               style={{
                 shape: "rect",
@@ -101,7 +105,7 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
                   });
     
                   const orderData = await response.json();
-                  // console.log(orderData)
+                  
                   if (orderData.id) {
                     return orderData.id;
                   } else {

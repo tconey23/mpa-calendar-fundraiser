@@ -79,6 +79,7 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
           student: selectedStudent,
         };
 
+        setTransactionStatus(null)
         console.log(reservation)
     
         await addStudentDate(reservation);
@@ -90,16 +91,22 @@ const DonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, setSele
         setSuccess(true)
       };
 
-            useEffect(() => {
-      
-              let student = selectedStudent?.replace(' ', '').toLowerCase()
-      
-              let donor
-              name ? donor = name.replace(' ', '').toLowerCase() : donor = 'Anon'
-      
-              let idNum = hashDate(Date.now())
-              setOrderId(`${donor}:${student}:${idNum}`)
-            }, [selectedStudent, name, message])
+      useEffect(() =>{
+        if(transactionStatus === 'COMPLETED'){
+          handleAddDate()
+        }
+      }, [transactionStatus])
+
+      useEffect(() => {
+
+        let student = selectedStudent?.replace(' ', '').toLowerCase()
+
+        let donor
+        name ? donor = name.replace(' ', '').toLowerCase() : donor = 'Anon'
+
+        let idNum = hashDate(Date.now())
+        setOrderId(`${donor}:${student}:${idNum}`)
+      }, [selectedStudent, name, message])
 
 
   return (

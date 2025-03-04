@@ -6,6 +6,11 @@ const studentData = async () => {
         const dbRef = ref(database, 'Students');
         const snapshot = await get(dbRef);
         if (snapshot.exists()) {
+            snapshot.val().forEach((st) => {
+                if(!st.dates){
+                    console.log(st)
+                }
+            })
             return snapshot.val(); 
         } else {
             // console.log('No data available');
@@ -155,7 +160,20 @@ const fetchStudentDetail = async (data) => {
 }
 
 const adminVal = () => {
-    
+    const adminToken = localStorage.getItem('adminKey')
+    // console.log(adminToken && adminToken)
+    return adminToken && Object.values(JSON.parse(adminToken))[0]
 }
 
-export { studentData, studentDates, addStudentDate, studentCredentials, debugUsers, fetchStudentDetail};
+const getBalance = async () => {
+    try {
+        const res = await fetch('http://localhost:3002/api/balance')
+        const data = await res.json()
+
+        return data
+    } catch (error) {
+        console.error(error);   
+    } 
+}
+
+export { studentData, studentDates, addStudentDate, studentCredentials, debugUsers, fetchStudentDetail, adminVal, getBalance};

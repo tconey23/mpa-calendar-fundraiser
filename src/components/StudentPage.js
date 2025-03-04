@@ -110,7 +110,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn, isDarkM
     if(success) {
       setTimeout(() => {
         setSuccess(false)
-      }, 3000);
+      }, 4000);
     }
   }, [success])
 
@@ -171,7 +171,7 @@ const StudentPage = ({ selectedStudent, setSelectedStudent, setLoggedIn, isDarkM
             <Stack overflow={'auto'} height={'100px'}>
             {reservedDates && reservedDates.map((dt, i) => { 
               return (
-                <AccordionDetails onMouseOver={() => setIsHover(i)} onMouseOut={() => setIsHover(null)} sx={{marginBottom: '0px', width: '100%'}}>
+                <AccordionDetails key={i} onMouseOver={() => setIsHover(i)} onMouseOut={() => setIsHover(null)} sx={{marginBottom: '0px', width: '100%'}}>
                 <Stack borderRadius={20} width={'100%'} fontSize={'clamp(5px, 2vw, 20px)'} direction={'row'} justifyContent={'space-around'} border={isHover !== i ? '1px solid black' : 'none'} 
                 sx={{
                   background: isHover === i ? theme.palette.primary.avatar : theme.palette.primary.main,

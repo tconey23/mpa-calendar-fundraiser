@@ -1,5 +1,5 @@
 import { useEffect} from 'react';
-import { MenuItem, Select} from '@mui/material';
+import { MenuItem, Select, Button} from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,7 +10,7 @@ import { studentData } from '../business/apiCalls';
 import PTALogo from '../assets/PTA-logo-Photoroom.png'
 import {useMediaQuery} from '@mui/material';
 
-const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, isDarkMode, setIsDarkMode}) => {
+const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, isDarkMode, setIsDarkMode, isAdmin, setToggleAdmin}) => {
     
     const webMed = useMediaQuery('(min-width:900px)');
     
@@ -26,6 +26,7 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
 
     useEffect(() => {
         getStudentList();
+        console.log(isAdmin)
     }, []);
 
     const handleChange = (event) => {
@@ -36,9 +37,12 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
         <Box width={'100vw'} sx={{ flexGrow: 1 }}> 
             <AppBar position="static">
                 <Toolbar>
-                    {/* <Box padding={2}>
-                        <i className="fi fi-br-menu-burger"></i>
-                    </Box> */}
+                    {isAdmin && 
+                    <Box padding={2}>
+                        <Button onClick={() => setToggleAdmin(prev => !prev)}>
+                            <i className="fi fi-br-menu-burger"></i>
+                        </Button>
+                    </Box>}
                    <Box padding={0.5} justifyContent={'center'} alignItems={'center'} width={'100%'} display={'flex'}>
                     <img style={{padding: 2, height: 'clamp(10vh, 10vw, 75px)', backgroundColor: isDarkMode && 'white'}} src={PTALogo}/>
                    </Box>

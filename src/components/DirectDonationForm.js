@@ -78,10 +78,18 @@ const DirectDonationForm = ({selectedDate, selectedStudent, setRefreshTrigger, s
           },
           student: selectedStudent,
         };
+
+        setTransactionStatus(null)
     
         await addStudentDate(reservation);
         resetData();
       };
+
+      useEffect(() => {
+        if(transactionStatus === 'COMPLETED') {
+          handleAddDate()
+        }
+      }, [transactionStatus])
 
       const handleChange = (e) => {
         const rawValue = e.target.value.replace(/[^0-9.]/g, "");
