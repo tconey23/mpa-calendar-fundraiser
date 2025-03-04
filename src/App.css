@@ -1,5 +1,24 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
 
+.css-x9tfml-MuiStack-root {
+  /* filter: brightness(0.3);
+  width: 50px; */
+}
+
+.css-x9tfml-MuiStack-root:hover{
+    /* animation: logoFade 1s ease-in-out both; */
+}
+
+@keyframes logoFade {
+  0% {
+    filter: brightness(0.3);
+    width: 50px;
+  }
+  100% {
+    filter: brightness(1);
+    width: 180px;
+  }
+}
 
 @keyframes fade-in {
   0% {

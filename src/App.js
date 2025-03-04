@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom"; 
+import { Routes, Route, BrowserRouter, Navigate, Link } from "react-router-dom"; 
 import { Stack, CssBaseline, Typography, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import { lightPalette, darkPalette } from './business/palette' 
@@ -10,15 +10,17 @@ import LoginFields from './components/LoginFields';
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { adminVal } from './business/apiCalls';
 import Admin from './components/Admin';
+import TcDevLogo from './components/TcDevLogo';
 
 function App() {
   const [students, setStudents] = useState([])
   const [selectedStudent, setSelectedStudent] = useState(null)
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [loggedIn, setLoggedIn] = useState(false)
-  const [version] = useState('4.2')
+  const [version] = useState('4.3')
   const [isAdmin, setIsAdmin] = useState(false)
   const [toggleAdmin, setToggleAdmin] = useState(false)
+  const [isHover, setIsHover] = useState(false)
 
   const webMed = useMediaQuery('(min-width:900px)')
 
@@ -38,7 +40,7 @@ function App() {
     <BrowserRouter initialEntries={["/home"]}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Stack sx={{overflow: webMed ? 'hidden' : 'auto'}} direction="column" justifyContent="center" alignItems={'center'} width={'100%'} height={'100vh'}>
+        <Stack sx={{overflow: webMed ? 'hidden' : 'auto'}} direction="column" justifyContent="center" alignItems={'center'} width={'100%'} height={'98vh'}>
           <AppHeader
             setToggleAdmin={setToggleAdmin}
             isAdmin={isAdmin}
@@ -54,7 +56,7 @@ function App() {
             justifyContent="flex-start"
             alignItems="center"
             padding={3}
-            sx={{overflow: webMed ? 'hidden' : 'auto', height: webMed ? '100vh' : '200vh'}}
+            sx={{overflow: webMed ? 'hidden' : 'auto', height: webMed ? '100%' : '200vh'}}
           >
             <Typography sx={{fontSize: webMed ? 30 : 15, textAlign: 'center'}}>Thank you for supporting the new MPA playground!</Typography>
             {!loggedIn && !toggleAdmin && 
@@ -69,8 +71,17 @@ function App() {
           <Stack>
             <Admin />
           </Stack>}
-          <Stack direction={'row'} alignItems={'flex-end'} width={'97vw'}>
-            <Typography fontSize={8}>ver: {version}</Typography>
+
+          <Stack direction={'row'} alignItems={'flex-end'} width={'97vw'} height={'30px'}>
+            <Box width={'45%'}>
+              <Typography fontSize={8}>ver: {version}</Typography>
+            </Box>
+            <Box width={'45%'}>
+
+            </Box>
+            <Stack height={'100%'} direction={'row'} alignSelf={'flex-end'} alignItems={'center'} justifyContent={'center'}>
+              <TcDevLogo />
+            </Stack>
           </Stack>
         </Stack>
       </ThemeProvider>

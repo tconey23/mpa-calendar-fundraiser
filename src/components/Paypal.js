@@ -67,10 +67,6 @@ const Paypal = ({donateAmount, setTransactionStatus, selectedStudent, orderId}) 
       useEffect(() => {
         setEndpoint(isDev ? "http://localhost:3002/api" : "https://mpa-fundraiser-be-ebd9ad3480fa.herokuapp.com/api");
       }, [isDev]);
-
-      useEffect(() => {
-
-      }, [])
       
 
       return (
