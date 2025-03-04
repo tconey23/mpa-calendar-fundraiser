@@ -11,6 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { adminVal } from './business/apiCalls';
 import Admin from './components/Admin';
 import TcDevLogo from './components/TcDevLogo';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [students, setStudents] = useState([])
@@ -82,6 +83,7 @@ function App() {
             <Stack height={'100%'} direction={'row'} alignSelf={'flex-end'} alignItems={'center'} justifyContent={'center'}>
               <TcDevLogo />
             </Stack>
+            <Analytics />
           </Stack>
         </Stack>
       </ThemeProvider>
