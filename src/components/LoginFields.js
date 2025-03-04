@@ -87,11 +87,11 @@ const LoginFields = ({setLoggedIn, loggedIn, setSelectedStudent}) => {
     }, [childFirst, childLast, password, username, webSml])
     
   return (
-    <Stack direction={'column'} sx={{ height: '79vh', width: '100%', borderColor:'white', borderStyle: 'solid', borderWidth: '1px', overflow: webMed ? 'hidden' : 'auto'}} paddingTop={3} justifyContent={'flex-start'} alignItems={'center'}>
+    <Stack direction={'column'} sx={{ height: '68vh', width: '100%', borderColor:'white', borderStyle: 'solid', borderWidth: '1px', overflow: webMed ? 'hidden' : 'auto'}} paddingTop={3} justifyContent={'flex-start'} alignItems={'center'}>
         <Stack direction={'column'} sx={{scale: webMed? 1 : 0.75, padding: 1, borderColor:'white', borderStyle: 'solid', borderWidth: '1px'}} width={webMed ? "90vw" : "98vw"} justifyContent={'center'} alignItems={'center'}>
-            <Typography textAlign={'center'} fontSize={webMed? 20 : 10}>Enter your child's <i>full</i> first and last name, as well as the last name of their <i>lead</i> teacher</Typography>
+            <Typography textAlign={'center'} fontSize={webMed? 15 : 8}>Enter your child's <i>full</i> first and last name, as well as the last name of their <i>lead</i> teacher</Typography>
             <i>
-                <Typography textAlign={'center'} fontSize={webMed? 20 : 10}>**Do not include any spaces or symbols (hyphen, apostrophe etc.)**</Typography>
+                <Typography textAlign={'center'} fontSize={webMed? 15 : 8}>**Do not include any spaces or symbols (hyphen, apostrophe etc.)**</Typography>
             </i>
             <Box
             component="form"

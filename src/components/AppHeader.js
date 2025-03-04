@@ -1,16 +1,14 @@
 import { useEffect} from 'react';
-import { MenuItem, Select, Button} from '@mui/material';
+import { Button, Stack} from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
 import { studentData } from '../business/apiCalls';
 import PTALogo from '../assets/PTA-logo-Photoroom.png'
 import {useMediaQuery} from '@mui/material';
+import DonationCounter from './DonationCounter';
 
-const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, isDarkMode, setIsDarkMode, isAdmin, setToggleAdmin}) => {
+const AppHeader = ({setStudents, setSelectedStudent, isDarkMode, setIsDarkMode, isAdmin, setToggleAdmin}) => {
     
     const webMed = useMediaQuery('(min-width:900px)');
     
@@ -18,7 +16,6 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
         try {
             const list = await studentData();
             setStudents(list);
-            // console.log(list)
         } catch (error) {
             console.error('Error fetching student list:', error);
         }
@@ -26,7 +23,6 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
 
     useEffect(() => {
         getStudentList();
-        console.log(isAdmin)
     }, []);
 
     const handleChange = (event) => {
@@ -37,41 +33,28 @@ const AppHeader = ({setStudents, setSelectedStudent, students, selectedStudent, 
         <Box width={'100vw'} sx={{ flexGrow: 1 }}> 
             <AppBar position="static">
                 <Toolbar>
+
                     {isAdmin && 
                     <Box padding={2}>
                         <Button onClick={() => setToggleAdmin(prev => !prev)}>
                             <i className="fi fi-br-menu-burger"></i>
                         </Button>
                     </Box>}
+
                    <Box padding={0.5} justifyContent={'center'} alignItems={'center'} width={'100%'} display={'flex'}>
                     <img style={{padding: 2, height: 'clamp(10vh, 10vw, 75px)', backgroundColor: isDarkMode && 'white'}} src={PTALogo}/>
                    </Box>
+
                     <Box sx={{cursor: 'pointer', ":hover": {filter: 'invert(1)'}}} onClick={() => setIsDarkMode(prev => !prev)}>
                         {isDarkMode ? <i className="fi fi-br-sun"></i> : <i className="fi fi-br-moon"></i>}
                     </Box>
-                    {/* <Box width={200} padding={2}>
-                        <FormControl fullWidth>
-                            <InputLabel id="demo-simple-select-label">Child's Name</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-label"
-                                id="demo-simple-select"
-                                value={selectedStudent}
-                                label="Child"
-                                onChange={handleChange}
-                            >
-                                {students &&
-                                    students
-                                        .sort((a, b) => a.FIRST.localeCompare(b.FIRST)) // Sort alphabetically
-                                        .map((st, i) => (
-                                            <MenuItem key={i} value={`${st.FIRST} ${st.LAST}`}>
-                                                {`${st.FIRST} ${st.LAST}`}
-                                            </MenuItem>
-                                        ))
-                                }
-                            </Select>
-                        </FormControl>
-                    </Box> */}
+
                 </Toolbar>
+
+                <Stack justifyContent={'center'} width={'100%'} alignItems={'center'}>
+                    <DonationCounter />
+                </Stack>
+
             </AppBar>
         </Box>
     );

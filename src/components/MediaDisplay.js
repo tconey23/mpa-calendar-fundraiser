@@ -10,11 +10,11 @@ const MediaDisplay = () => {
 return (
     <Stack padding={1} justifyContent={'flex-start'} alignItems={'center'} maxHeight={'60vh'}>
             <Stack display={'flex'} flexDirection={'column'} justifyContent={'flex-start'} alignItems={'center'} height={'50%'}>
-                <a style={{height: '100%', justifyContent:'center', display: 'flex'}} href="https://www.bienenstockplaygrounds.com/" target='blank'>
+                <a style={{height: '80%', justifyContent:'center', display: 'flex'}} href="https://www.bienenstockplaygrounds.com/" target='blank'>
                     <img style={{width: '75%', height: '75%'}} src={BienLogo}/>
                 </a>
                 <Tooltip title='click to enlarge'>
-                    <img onClick={() => setIsHover(true)} style={{width: '100%', height: '100%', boxShadow: '#000000a1 3px 2px 13px 1px', cursor: 'pointer'}} src={PlaygroundImg}/>
+                    <img onClick={() => setIsHover(true)} style={{width: '100%', height: '85%', boxShadow: '#000000a1 3px 2px 13px 1px', cursor: 'pointer'}} src={PlaygroundImg}/>
                 </Tooltip>
             </Stack>
 
